@@ -1,0 +1,74 @@
+[
+  {
+    "id": "reward-b1",
+    "title": "Budget Template Pack",
+    "description": "Download a set of professionally designed budget templates for weekly, monthly, and yearly planning.",
+    "icon": "ph-duotone ph-file-text",
+    "cost": 200,
+    "tier": "bronze"
+  },
+  {
+    "id": "reward-b2",
+    "title": "Financial Tip Cards",
+    "description": "Unlock a collection of 20 bite-sized financial tips you can revisit anytime.",
+    "icon": "ph-duotone ph-lightbulb",
+    "cost": 400,
+    "tier": "bronze"
+  },
+  {
+    "id": "reward-s1",
+    "title": "Savings Goal Tracker",
+    "description": "A visual savings tracker to monitor your progress toward any financial goal.",
+    "icon": "ph-duotone ph-chart-line-up",
+    "cost": 500,
+    "tier": "silver"
+  },
+  {
+    "id": "reward-s2",
+    "title": "Investment Starter Guide",
+    "description": "An introductory guide to investing basics, covering stocks, bonds, and index funds.",
+    "icon": "ph-duotone ph-book-open",
+    "cost": 650,
+    "tier": "silver"
+  },
+  {
+    "id": "reward-s3",
+    "title": "Custom Avatar Frame",
+    "description": "Unlock a special profile avatar frame that showcases your financial literacy achievements.",
+    "icon": "ph-duotone ph-user-circle",
+    "cost": 750,
+    "tier": "silver"
+  },
+  {
+    "id": "reward-s4",
+    "title": "Scam Defence Toolkit",
+    "description": "A comprehensive checklist and resource pack for identifying and avoiding financial scams.",
+    "icon": "ph-duotone ph-shield-check",
+    "cost": 900,
+    "tier": "silver"
+  },
+  {
+    "id": "reward-g1",
+    "title": "Financial Wellness Certificate",
+    "description": "Earn a digital certificate recognising your completion of the Net Gains financial literacy programme.",
+    "icon": "ph-duotone ph-certificate",
+    "cost": 1000,
+    "tier": "gold"
+  },
+  {
+    "id": "reward-g2",
+    "title": "Exclusive Masterclass Access",
+    "description": "Unlock access to an exclusive video masterclass on advanced personal finance and wealth building.",
+    "icon": "ph-duotone ph-video",
+    "cost": 1500,
+    "tier": "gold"
+  },
+  {
+    "id": "reward-g3",
+    "title": "Net Gains Champion Badge",
+    "description": "The ultimate achievement badge for financial literacy champions. Display it proudly on your profile.",
+    "icon": "ph-duotone ph-trophy",
+    "cost": 2000,
+    "tier": "gold"
+  }
+]
