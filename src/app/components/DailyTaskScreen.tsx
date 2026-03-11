@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import { QuizPage } from "./QuizPage";
 import { QuizRewardsPage } from "./QuizRewardsPage";
+import { useDailyTaskData } from "../hooks/useDailyTaskData";
+import { useEffect } from "react";
 
 interface DailyTaskScreenProps {
   day: number;
@@ -34,6 +36,32 @@ export function DailyTaskScreen({ day, onBack }: DailyTaskScreenProps) {
   const [journalEntry, setJournalEntry] = useState("");
   const [attempts, setAttempts] = useState(0);
   const [showRetryMessage, setShowRetryMessage] = useState(false);
+
+  // Load progress from localStorage
+  useEffect(() => {
+    const savedProgress = localStorage.getItem(`ng_progress_day_${day}`);
+    if (savedProgress) {
+      const parsed = JSON.parse(savedProgress);
+      if (parsed.videoWatched) setVideoWatched(true);
+      if (parsed.quizCompleted) setQuizCompleted(true);
+      if (parsed.challengeCompleted) setChallengeCompleted(true);
+      if (parsed.taskCompleted) setTaskCompleted(true);
+      if (parsed.quizScore) setQuizScore(parsed.quizScore);
+    }
+  }, [day]);
+
+  // Save progress whenever a state changes
+  useEffect(() => {
+    localStorage.setItem(`ng_progress_day_${day}`, JSON.stringify({
+      videoWatched,
+      quizCompleted,
+      challengeCompleted,
+      taskCompleted,
+      quizScore
+    }));
+  }, [day, videoWatched, quizCompleted, challengeCompleted, taskCompleted, quizScore]);
+
+  const { taskData, loading } = useDailyTaskData(day);
 
   const passThreshold = 80;
   const coinRewards = [100, 75, 50, 25]; // 1st, 2nd, 3rd, 4th+ attempts
@@ -100,6 +128,7 @@ export function DailyTaskScreen({ day, onBack }: DailyTaskScreenProps) {
       <QuizPage
         day={day}
         attempt={attempts + 1}
+        questions={taskData?.quiz_questions || []}
         onComplete={handleQuizComplete}
         onBack={() => setCurrentView("daily")}
       />
@@ -117,6 +146,15 @@ export function DailyTaskScreen({ day, onBack }: DailyTaskScreenProps) {
         coinsEarned={getCoinsEarned()}
         onContinue={handleRewardsContinue}
       />
+    );
+  }
+
+  // Show daily task screen
+  if (loading || !taskData) {
+    return (
+      <div className="min-h-screen pb-24 px-5 pt-6 flex items-center justify-center" style={{ backgroundColor: "#F1F7F6" }}>
+        <p style={{ color: "#021B1A", fontSize: 18, fontWeight: 700 }}>Loading...</p>
+      </div>
     );
   }
 
@@ -153,7 +191,7 @@ export function DailyTaskScreen({ day, onBack }: DailyTaskScreenProps) {
               fontWeight: 800,
             }}
           >
-            Day {day} • Monday
+            Day {day} • Task
           </h1>
           <p
             style={{
@@ -162,7 +200,7 @@ export function DailyTaskScreen({ day, onBack }: DailyTaskScreenProps) {
               fontWeight: 500,
             }}
           >
-            Budgeting Fundamentals
+            {taskData.title}
           </p>
         </div>
       </motion.div>
@@ -262,7 +300,7 @@ export function DailyTaskScreen({ day, onBack }: DailyTaskScreenProps) {
             marginBottom: 8,
           }}
         >
-          Understanding Your Income
+          {taskData.video_title}
         </h3>
         <p
           style={{
@@ -273,8 +311,7 @@ export function DailyTaskScreen({ day, onBack }: DailyTaskScreenProps) {
             lineHeight: 1.6,
           }}
         >
-          Learn how to track and categorize different types of income to build
-          a solid financial foundation.
+          Watch this video to understand the core concepts for today's lesson. Pay attention as the quiz will test this knowledge!
         </p>
 
         {/* Video thumbnail/progress */}
@@ -571,7 +608,7 @@ export function DailyTaskScreen({ day, onBack }: DailyTaskScreenProps) {
             marginBottom: 8,
           }}
         >
-          Track Your Income
+          {taskData.challenge.title}
         </h3>
         <p
           style={{
@@ -582,8 +619,7 @@ export function DailyTaskScreen({ day, onBack }: DailyTaskScreenProps) {
             lineHeight: 1.6,
           }}
         >
-          Create a simple spreadsheet or list documenting all your income
-          sources for the past month. Include amounts, dates, and categories.
+          {taskData.challenge.description}
         </p>
 
         <motion.button
@@ -656,7 +692,7 @@ export function DailyTaskScreen({ day, onBack }: DailyTaskScreenProps) {
             marginBottom: 8,
           }}
         >
-          Set a Savings Goal
+          {taskData.task.title}
         </h3>
         <p
           style={{
@@ -667,8 +703,7 @@ export function DailyTaskScreen({ day, onBack }: DailyTaskScreenProps) {
             lineHeight: 1.6,
           }}
         >
-          Identify one financial goal for this month (e.g., save $50 for a new
-          book) and write down 2-3 specific steps you'll take to achieve it.
+          {taskData.task.description}
         </p>
 
         <motion.button

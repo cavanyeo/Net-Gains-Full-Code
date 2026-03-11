@@ -2,7 +2,9 @@ import { Check, Lock, Trophy, Flame } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { CoinMascot } from "./CoinMascot";
-import { DailyTaskScreen } from "./DailyTaskScreen";
+import { useNavigate } from "react-router";
+import { useAuth } from "../contexts/AuthContext";
+import { useDashboardData } from "../hooks/useDashboardData";
 
 interface DayNode {
   day: string;
@@ -11,15 +13,7 @@ interface DayNode {
   coins?: number;
 }
 
-const weekDays: DayNode[] = [
-  { day: "MON", label: "Day 1", status: "completed", coins: 100 },
-  { day: "TUE", label: "Day 2", status: "completed", coins: 100 },
-  { day: "WED", label: "Day 3", status: "active", coins: 0 },
-  { day: "THU", label: "Day 4", status: "active" },
-  { day: "FRI", label: "Day 5", status: "active" },
-  { day: "SAT", label: "Day 6", status: "active" },
-  { day: "SUN", label: "Day 7", status: "active" },
-];
+// We will generate weekDays dynamically based on currentCourse
 
 function CircularProgress({
   current,
@@ -181,7 +175,13 @@ function CircularProgress({
   );
 }
 
-function WeeklyRoadmap({ onDayClick }: { onDayClick: (dayIndex: number) => void }) {
+function WeeklyRoadmap({ 
+  weekDays, 
+  onDayClick 
+}: { 
+  weekDays: DayNode[]; 
+  onDayClick: (dayIndex: number) => void;
+}) {
   return (
     <div className="relative">
       {/* Path connector line */}
@@ -327,32 +327,63 @@ function WeeklyRoadmap({ onDayClick }: { onDayClick: (dayIndex: number) => void 
 }
 
 export function HomeDashboard() {
-  const [selectedDay, setSelectedDay] = useState<number | null>(null);
+  const navigate = useNavigate();
+  const { user } = useAuth();
+  const { weeklyCoins, weeklyGoal, currentCourse, loading } = useDashboardData();
+  
+  // Generate weekDays based on currentCourse
+  const daysOfWeek = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+  const completedDays = currentCourse?.completed_days || 0;
+  
+  const weekDays: DayNode[] = daysOfWeek.map((dayName, index) => {
+    let status: "completed" | "active" | "locked" = "locked";
+    if (index < completedDays) status = "completed";
+    else if (index === completedDays) status = "active";
+    
+    return {
+      day: dayName,
+      label: `Day ${index + 1}`,
+      status,
+      coins: status === "completed" ? 100 : undefined
+    };
+  });
   
   // Determine mascot expression based on today's task completion
-  // In real app, this would come from actual task data
-  const todayTask = weekDays.find(d => d.status === "active");
-  const hasVideoWatched = false; // Would check actual video completion
-  const hasQuizPassed = false; // Would check actual quiz completion
-  const hasChallengeCompleted = false; // Would check actual challenge completion
+  const activeIndex = weekDays.findIndex((d) => d.status === "active");
+  const currentDay = activeIndex >= 0 ? activeIndex + 1 : 1;
+  
+  // Read actual progress from local storage
+  const ngProgress = localStorage.getItem(`ng_progress_day_${currentDay}`);
+  let hasVideoWatched = false;
+  let hasQuizPassed = false;
+  let hasChallengeCompleted = false;
+  let hasTaskCompleted = false;
+
+  if (ngProgress) {
+    const parsed = JSON.parse(ngProgress);
+    hasVideoWatched = parsed.videoWatched || false;
+    hasQuizPassed = parsed.quizCompleted || false;
+    hasChallengeCompleted = parsed.challengeCompleted || false;
+    hasTaskCompleted = parsed.taskCompleted || false;
+  }
   
   let mascotExpression: "angry" | "neutral" | "happy" = "angry";
   let mascotMessage = "";
   
-  if (!hasVideoWatched && !hasQuizPassed && !hasChallengeCompleted) {
-    mascotExpression = "angry";
-    mascotMessage = ""; // Will use random message from CoinMascot
-  } else if (hasVideoWatched && !hasQuizPassed) {
-    mascotExpression = "neutral";
-    mascotMessage = ""; // Will use random message from CoinMascot
-  } else if (hasVideoWatched && hasQuizPassed && hasChallengeCompleted) {
+  if (hasVideoWatched && hasQuizPassed && hasChallengeCompleted && hasTaskCompleted) {
     mascotExpression = "happy";
-    mascotMessage = ""; // Will use random message from CoinMascot
+  } else if (hasVideoWatched && hasQuizPassed) {
+    mascotExpression = "neutral";
+  } else {
+    mascotExpression = "angry";
   }
 
-  // Show daily task screen if a day is selected
-  if (selectedDay !== null) {
-    return <DailyTaskScreen day={selectedDay} onBack={() => setSelectedDay(null)} />;
+  if (loading) {
+    return (
+      <div className="min-h-screen pb-24 px-5 pt-6 flex items-center justify-center bg-[#F1F7F6]">
+        <div className="animate-spin w-10 h-10 border-4 border-[#2CC295] border-t-transparent rounded-full"></div>
+      </div>
+    );
   }
 
   return (
@@ -385,7 +416,7 @@ export function HomeDashboard() {
                 fontWeight: 800,
               }}
             >
-              Alex Chen
+              {user?.name || "Ready to learn"}
             </h1>
           </div>
 
@@ -436,7 +467,7 @@ export function HomeDashboard() {
                 fontWeight: 700,
               }}
             >
-              3 Day Streak
+              {user?.login_streak || 0} Day Streak
             </span>
           </div>
           <span
@@ -458,7 +489,7 @@ export function HomeDashboard() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.2 }}
       >
-        <CircularProgress current={200} total={700} />
+        <CircularProgress current={weeklyCoins} total={weeklyGoal} />
       </motion.div>
 
       {/* Mascot companion - Centered below circle */}
@@ -507,13 +538,13 @@ export function HomeDashboard() {
                 fontWeight: 500,
               }}
             >
-              Week 1 • Budgeting Fundamentals
+              Week {currentCourse?.week_number || 1} • {currentCourse?.title || "Budgeting Fundamentals"}
             </p>
           </div>
           <Trophy size={24} color="#2CC295" />
         </div>
 
-        <WeeklyRoadmap onDayClick={(dayIndex) => setSelectedDay(dayIndex)} />
+        <WeeklyRoadmap weekDays={weekDays} onDayClick={(dayIndex) => navigate(`/courses/${dayIndex}`)} />
 
         {/* Completion bonus info */}
         <div

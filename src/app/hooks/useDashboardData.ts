@@ -81,7 +81,8 @@ export function useDashboardData(): DashboardData {
              .eq('course_id', course.id)
              .eq('status', 'completed');
              
-          completedDays = count || 0;
+          const isMasterUnlocked = localStorage.getItem('ng_master_unlocked') === 'true';
+          completedDays = isMasterUnlocked ? 7 : (count || 0);
         }
 
         const weeklyGoal = 700;

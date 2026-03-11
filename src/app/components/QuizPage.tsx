@@ -2,138 +2,25 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import { ArrowLeft, CheckCircle2, XCircle, Clock } from "lucide-react";
 
-interface QuizQuestion {
-  id: number;
+export interface QuizQuestion {
   question: string;
   options: string[];
-  correctAnswer: number;
+  correct_answer: number;
 }
 
 interface QuizPageProps {
   day: number;
   attempt: number;
+  questions: QuizQuestion[];
   onComplete: (score: number, passed: boolean) => void;
   onBack: () => void;
 }
 
-const quizQuestions: QuizQuestion[] = [
-  {
-    id: 1,
-    question: "What is the first step in creating a budget?",
-    options: [
-      "Start cutting expenses immediately",
-      "Track all sources of income",
-      "Buy a budgeting app",
-      "Open a savings account",
-    ],
-    correctAnswer: 1,
-  },
-  {
-    id: 2,
-    question: "Which of the following is considered 'active income'?",
-    options: [
-      "Stock dividends",
-      "Rental property income",
-      "Salary from a part-time job",
-      "Interest from savings account",
-    ],
-    correctAnswer: 2,
-  },
-  {
-    id: 3,
-    question: "What does the 50/30/20 budgeting rule suggest?",
-    options: [
-      "50% savings, 30% needs, 20% wants",
-      "50% needs, 30% wants, 20% savings",
-      "50% wants, 30% savings, 20% needs",
-      "50% needs, 30% savings, 20% wants",
-    ],
-    correctAnswer: 1,
-  },
-  {
-    id: 4,
-    question: "Why is it important to track irregular income (like birthday money)?",
-    options: [
-      "It's not important - only regular income matters",
-      "To get a complete picture of your finances",
-      "Because it's usually tax-free",
-      "To impress your friends",
-    ],
-    correctAnswer: 1,
-  },
-  {
-    id: 5,
-    question: "What is 'gross income'?",
-    options: [
-      "Income after taxes and deductions",
-      "Income from a second job only",
-      "Total income before any deductions",
-      "Money you keep in your wallet",
-    ],
-    correctAnswer: 2,
-  },
-  {
-    id: 6,
-    question: "Which category would 'allowance from parents' fall under?",
-    options: [
-      "Passive income",
-      "Active income",
-      "Regular income",
-      "Investment income",
-    ],
-    correctAnswer: 2,
-  },
-  {
-    id: 7,
-    question: "How often should you review and update your budget?",
-    options: [
-      "Once a year",
-      "Every 5 years",
-      "Regularly (weekly or monthly)",
-      "Only when you get a raise",
-    ],
-    correctAnswer: 2,
-  },
-  {
-    id: 8,
-    question: "What's the benefit of categorizing your income sources?",
-    options: [
-      "It makes your spreadsheet look prettier",
-      "It helps you understand income patterns and plan better",
-      "Banks require it for account opening",
-      "It's legally required for teenagers",
-    ],
-    correctAnswer: 1,
-  },
-  {
-    id: 9,
-    question: "Which is an example of documenting income properly?",
-    options: [
-      "Remembering roughly how much you earned",
-      "Writing down amount, date, and source",
-      "Only tracking amounts over $100",
-      "Counting cash in your wallet weekly",
-    ],
-    correctAnswer: 1,
-  },
-  {
-    id: 10,
-    question: "Why should you track small income amounts (like $5)?",
-    options: [
-      "You shouldn't - it's a waste of time",
-      "Small amounts add up over time",
-      "Only if it's from a job",
-      "To complicate your budget",
-    ],
-    correctAnswer: 1,
-  },
-];
-
-export function QuizPage({ day, attempt, onComplete, onBack }: QuizPageProps) {
+export function QuizPage({ day, attempt, questions, onComplete, onBack }: QuizPageProps) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<
     (number | null)[]
-  >(Array(quizQuestions.length).fill(null));
+  >(Array(questions.length).fill(null));
   const [showResults, setShowResults] = useState(false);
   const [timeLeft, setTimeLeft] = useState(300); // 5 minutes in seconds
 
@@ -160,7 +47,7 @@ export function QuizPage({ day, attempt, onComplete, onBack }: QuizPageProps) {
   };
 
   const handleNext = () => {
-    if (currentQuestion < quizQuestions.length - 1) {
+    if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     }
   };
@@ -175,12 +62,12 @@ export function QuizPage({ day, attempt, onComplete, onBack }: QuizPageProps) {
     // Calculate score
     let correct = 0;
     selectedAnswers.forEach((answer, index) => {
-      if (answer === quizQuestions[index].correctAnswer) {
+      if (answer === questions[index].correct_answer) {
         correct++;
       }
     });
 
-    const scorePercentage = Math.round((correct / quizQuestions.length) * 100);
+    const scorePercentage = Math.round((correct / questions.length) * 100);
     const passed = scorePercentage >= 80;
 
     onComplete(scorePercentage, passed);
@@ -192,9 +79,9 @@ export function QuizPage({ day, attempt, onComplete, onBack }: QuizPageProps) {
     return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
-  const progress = ((currentQuestion + 1) / quizQuestions.length) * 100;
+  const progress = ((currentQuestion + 1) / questions.length) * 100;
   const answeredCount = selectedAnswers.filter((a) => a !== null).length;
-  const allAnswered = answeredCount === quizQuestions.length;
+  const allAnswered = answeredCount === questions.length;
 
   return (
     <div
@@ -285,7 +172,7 @@ export function QuizPage({ day, attempt, onComplete, onBack }: QuizPageProps) {
               fontWeight: 700,
             }}
           >
-            Question {currentQuestion + 1} of {quizQuestions.length}
+            Question {currentQuestion + 1} of {questions.length}
           </span>
           <span
             style={{
@@ -294,7 +181,7 @@ export function QuizPage({ day, attempt, onComplete, onBack }: QuizPageProps) {
               fontWeight: 600,
             }}
           >
-            {answeredCount}/{quizQuestions.length} answered
+            {answeredCount}/{questions.length} answered
           </span>
         </div>
         <div
@@ -358,12 +245,12 @@ export function QuizPage({ day, attempt, onComplete, onBack }: QuizPageProps) {
               lineHeight: 1.4,
             }}
           >
-            {quizQuestions[currentQuestion].question}
+            {questions[currentQuestion].question}
           </h2>
 
           {/* Answer Options */}
           <div className="space-y-3">
-            {quizQuestions[currentQuestion].options.map((option, index) => {
+            {questions[currentQuestion].options.map((option, index) => {
               const isSelected = selectedAnswers[currentQuestion] === index;
               return (
                 <motion.button
@@ -445,7 +332,7 @@ export function QuizPage({ day, attempt, onComplete, onBack }: QuizPageProps) {
           </span>
         </motion.button>
 
-        {currentQuestion < quizQuestions.length - 1 ? (
+        {currentQuestion < questions.length - 1 ? (
           <motion.button
             className="flex-1 py-3.5 rounded-xl"
             style={{
@@ -517,7 +404,7 @@ export function QuizPage({ day, attempt, onComplete, onBack }: QuizPageProps) {
           Quick Navigation
         </p>
         <div className="grid grid-cols-5 gap-2">
-          {quizQuestions.map((_, index) => {
+          {questions.map((_, index) => {
             const isAnswered = selectedAnswers[index] !== null;
             const isCurrent = currentQuestion === index;
             return (

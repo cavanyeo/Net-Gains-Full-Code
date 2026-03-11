@@ -1,0 +1,2421 @@
+[
+  {
+    "id": "course-w1",
+    "title": "The \"Labor-to-Value\" Foundation",
+    "description": "Disconnect from abstract numbers and ground yourself in the reality of money, value, and basic budgeting.",
+    "weeks": 1,
+    "total_coins": 1400,
+    "daily_tasks": [
+      {
+        "day_number": 1,
+        "title": "The Needs, Wants, and the 50/30/20 Rule",
+        "video_url": "https://www.youtube.com/embed/HQzoZfc3GwQ",
+        "video_title": "The 50/30/20 Rule Explained",
+        "challenge": {
+          "title": "The Coffee vs. Compound Slider",
+          "description": "Adjust a slider to see how saving daily small amounts (like $5) compounds over 10 years at 4% interest.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Audit Your Last 3 Purchases",
+          "description": "Write down the last 3 things you bought and categorize them strictly into Needs or Wants.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "What does the \"50\" in the 50/30/20 rule stand for?",
+            "options": [
+              "Savings",
+              "Needs",
+              "Wants",
+              "Investments"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What does the \"20\" stand for in the 50/30/20 rule?",
+            "options": [
+              "Wants",
+              "Needs",
+              "Savings/Investments",
+              "Entertainment"
+            ],
+            "correct_answer": 2
+          },
+          {
+            "question": "Groceries and utilities fall under which category?",
+            "options": [
+              "Wants",
+              "Needs",
+              "Savings",
+              "Luxuries"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Dining out at a fancy restaurant is considered a:",
+            "options": [
+              "Need",
+              "Want",
+              "Investment",
+              "Emergency expense"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If you earn $1000, how much should ideally go to Wants?",
+            "options": [
+              "$500",
+              "$200",
+              "$300",
+              "$100"
+            ],
+            "correct_answer": 2
+          },
+          {
+            "question": "True or False: Savings should only happen if you have money left over at the end of the month.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Which of the following is a Need?",
+            "options": [
+              "Concert tickets",
+              "Bus fare to work/school",
+              "Designer clothes",
+              "Streaming subscription"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is \"compound interest\"?",
+            "options": [
+              "Interest charged on loans",
+              "Earning interest on your initial savings and the accumulated interest",
+              "A type of bank fee",
+              "Interest that decreases over time"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why is the 50/30/20 rule just a guideline?",
+            "options": [
+              "Because it only works for rich people",
+              "Because everyone's living situation and income varies",
+              "Because banks don't follow it",
+              "Because it was made up"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If you receive $100 for your birthday, how much should go into savings under this rule?",
+            "options": [
+              "$50",
+              "$30",
+              "$20",
+              "$10"
+            ],
+            "correct_answer": 2
+          }
+        ]
+      },
+      {
+        "day_number": 2,
+        "title": "Inflation and The True Cost of Things",
+        "video_url": "https://www.youtube.com/embed/T8-85cZRI9o",
+        "video_title": "What is Inflation?",
+        "challenge": {
+          "title": "Time is Money",
+          "description": "Input a desired luxury item (e.g., $150 shoes) and your hourly wage/allowance. The app calculates exactly how many hours of work it takes to afford it.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Find the Shrinkflation",
+          "description": "Find one item in your house or at the supermarket that has stayed the same price but gotten smaller in size over the years.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "What is inflation?",
+            "options": [
+              "The general increase in prices over time",
+              "A type of investment",
+              "When prices go down",
+              "A banking fee"
+            ],
+            "correct_answer": 0
+          },
+          {
+            "question": "True or False: Inflation decreases your purchasing power.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 0
+          },
+          {
+            "question": "If inflation is 3%, what happens to a $100 bill hidden under your mattress after one year?",
+            "options": [
+              "It gains value",
+              "It buys 3% less than it used to",
+              "Nothing changes",
+              "It earns interest"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is the \"True Cost\" of an item?",
+            "options": [
+              "The price on the tag",
+              "The amount of time and labor required to earn enough to buy it",
+              "The cost after tax",
+              "The wholesale price"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Which group is most negatively affected by high inflation?",
+            "options": [
+              "Business owners",
+              "People on fixed incomes/savings",
+              "Tech workers",
+              "Government employees"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is shrinkflation?",
+            "options": [
+              "When stores shrink in size",
+              "Products reducing in size or quantity while pricing remains the same",
+              "Inflation going down",
+              "Prices decreasing over time"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If you earn $10/hour, how many hours must you work to buy a $50 game?",
+            "options": [
+              "3 hours",
+              "4 hours",
+              "5 hours",
+              "10 hours"
+            ],
+            "correct_answer": 2
+          },
+          {
+            "question": "How can you protect your money from inflation?",
+            "options": [
+              "Keep it under your mattress",
+              "By investing it in assets that grow faster than the inflation rate",
+              "Spend it all immediately",
+              "Convert it to coins"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "When the price of basic necessities goes up, which category of the 50/30/20 rule is directly impacted?",
+            "options": [
+              "The 30% Wants category",
+              "The 50% Needs category",
+              "The 20% Savings category",
+              "None of them"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Earning 1% interest at the bank means you are beating 3% inflation.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      },
+      {
+        "day_number": 3,
+        "title": "Building the Emergency Fund",
+        "video_url": "https://www.youtube.com/embed/fVToMS2Q3XQ",
+        "video_title": "Emergency Fund Basics",
+        "challenge": {
+          "title": "The Rainy Day Scenario",
+          "description": "You are presented with 3 simulated emergencies (e.g. broken phone, medical bill). Drag and drop funds from your \"Checking\" to cover it, showing the stress of being unprepared.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Start Your Emergency Fund",
+          "description": "Set up an automatic transfer or physically set aside $5 into an \"Emergency Only\" fund today.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "What is an emergency fund?",
+            "options": [
+              "A credit card for emergencies",
+              "Savings set aside strictly for unexpected, urgent expenses",
+              "Money for vacations",
+              "A government program"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Which of the following is a valid use of an emergency fund?",
+            "options": [
+              "New video game",
+              "Sudden medical bill",
+              "Birthday gift",
+              "Concert tickets"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Is a new video game release an emergency?",
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "How many months of living expenses should a typical adult aim to save in an emergency fund?",
+            "options": [
+              "1 month",
+              "3 to 6 months",
+              "12 months",
+              "24 months"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Teenagers don't need emergency funds because their parents pay for everything.",
+            "options": [
+              "True",
+              "False, teens have unexpected expenses too"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Where should you keep an emergency fund?",
+            "options": [
+              "In stocks",
+              "In a highly accessible, liquid bank account",
+              "In cryptocurrency",
+              "Under your mattress"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What happens if you use a credit card for an emergency instead of cash reserves?",
+            "options": [
+              "Nothing bad",
+              "You risk falling into high-interest debt",
+              "You earn rewards",
+              "The bank covers it"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "After using money from your emergency fund, what is the next step?",
+            "options": [
+              "Forget about it",
+              "Replenish it as soon as possible",
+              "Close the account",
+              "Invest the remaining balance"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Which of these is NOT an emergency?",
+            "options": [
+              "Car breakdown",
+              "Medical emergency",
+              "Holiday gifts",
+              "Job loss"
+            ],
+            "correct_answer": 2
+          },
+          {
+            "question": "Why do people often fail to build an emergency fund?",
+            "options": [
+              "Banks won't let them",
+              "They confuse 'wants' with 'emergencies'",
+              "It's illegal",
+              "They earn too much money"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      },
+      {
+        "day_number": 4,
+        "title": "Needs vs Wants Deep Dive",
+        "video_url": "https://www.youtube.com/embed/HjhI6-JBi-A",
+        "video_title": "Needs vs Wants Psychology",
+        "challenge": {
+          "title": "The 24-Hour Rule",
+          "description": "You are presented with 3 impulse buy scenarios (e.g., an online flash sale). You must choose to \"Wait 24 Hours,\" observing how the \"need\" to buy drops the next day.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Delay a Want Purchase",
+          "description": "Identify one \"Want\" you planned to buy this week and delay the purchase by at least 48 hours.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "Why do companies use limited-time \"Flash Sales\"?",
+            "options": [
+              "To clear old stock",
+              "To trigger FOMO and bypass logical thinking",
+              "To help customers save",
+              "Because items are damaged"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is the \"24-Hour Rule\"?",
+            "options": [
+              "A banking regulation",
+              "Waiting 24 hours before making a non-essential purchase to avoid impulse buying",
+              "A credit card cooling period",
+              "A refund policy"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Social media algorithms are designed to show you products you are likely to impulse buy.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 0
+          },
+          {
+            "question": "Is upgrading a functional phone to the newest model a Need or a Want?",
+            "options": [
+              "Need",
+              "Want"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "How can you distinguish a true Need from a Want?",
+            "options": [
+              "If you really want it, it's a Need",
+              "A Need is required for survival or basic functioning like work/school",
+              "If it's on sale, it's a Need",
+              "If your friends have it, it's a Need"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is \"lifestyle inflation\"?",
+            "options": [
+              "Prices going up",
+              "Spending more on Wants just because your income has increased",
+              "Getting a raise",
+              "Inflation affecting your lifestyle"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Buying branded sneakers instead of regular running shoes turns a Need into a Want.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 0
+          },
+          {
+            "question": "Which emotion is most likely to cause impulse spending?",
+            "options": [
+              "Happiness",
+              "Boredom",
+              "Stress or sadness - \"Retail Therapy\"",
+              "Confidence"
+            ],
+            "correct_answer": 2
+          },
+          {
+            "question": "What is a good strategy to avoid online impulse buys?",
+            "options": [
+              "Browse more often",
+              "Remove saved credit card details from shopping apps",
+              "Follow more brands on social media",
+              "Set up auto-buy"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If you delay a purchase by 24 hours and realize you don't actually care about it anymore, what was it?",
+            "options": [
+              "A missed opportunity",
+              "An impulse Want",
+              "A Need you forgot about",
+              "A bargain"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      },
+      {
+        "day_number": 5,
+        "title": "Goal Setting (SMART Goals)",
+        "video_url": "https://www.youtube.com/embed/1-SvuFIQjK8",
+        "video_title": "SMART Financial Goals",
+        "challenge": {
+          "title": "Fix the Bad Goal",
+          "description": "You are given a vague goal (\"I want to be rich\") and must select the correct components to turn it into a SMART goal.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Write Your SMART Goal",
+          "description": "Write down one SMART financial goal for the next 30 days and put it somewhere visible.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "What does the \"S\" in SMART stand for?",
+            "options": [
+              "Savings",
+              "Specific",
+              "Simple",
+              "Strategic"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why is \"I want to save money\" NOT a SMART goal?",
+            "options": [
+              "It's too easy",
+              "It is not specific or measurable",
+              "It costs too much",
+              "It's not important"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What makes a goal \"Time-bound\"?",
+            "options": [
+              "It takes a long time",
+              "Having a strict deadline or target date",
+              "It's about time management",
+              "It expires quickly"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What does the \"A\" in SMART stand for?",
+            "options": [
+              "Amazing",
+              "Achievable",
+              "Automatic",
+              "Advanced"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If you earn $100 a month, why is \"Save $2000 in two months\" a bad goal?",
+            "options": [
+              "It's too specific",
+              "It is not Achievable",
+              "It's not time-bound",
+              "It's too measurable"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Writing down a goal increases your chances of achieving it.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 0
+          },
+          {
+            "question": "What makes a goal \"Measurable\"?",
+            "options": [
+              "It can be weighed",
+              "Including exact numbers or dollar amounts so you can track progress",
+              "It's about measurements",
+              "It requires a ruler"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What does \"Relevant\" mean in goal setting?",
+            "options": [
+              "It's popular",
+              "The goal matters to your personal life plan or values",
+              "It's about current events",
+              "It's trending online"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Which of the following is a SMART goal?",
+            "options": [
+              "I want to be rich",
+              "I will save $20 a week for 5 weeks to buy a $100 concert ticket",
+              "I'll try to save someday",
+              "Money is important"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Once you reach a short-term financial goal, what should you do?",
+            "options": [
+              "Stop saving entirely",
+              "Celebrate and set a new goal",
+              "Spend all savings",
+              "Close your account"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      },
+      {
+        "day_number": 6,
+        "title": "Reading a Payslip/Receipt",
+        "video_url": "https://www.youtube.com/embed/Wl-AiJwP4Tg",
+        "video_title": "Understanding Your Payslip",
+        "challenge": {
+          "title": "The Missing Money",
+          "description": "Given a mock part-time payslip showing a gross pay of $500 and a net pay of $400, correctly identify the missing $100 as the mandatory CPF contribution.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Analyze a Receipt",
+          "description": "Look at your last restaurant receipt and calculate how much the GST and Service Charge added to the base price of the food.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "What is Gross Pay?",
+            "options": [
+              "Take-home pay",
+              "The total amount of money earned before any deductions",
+              "Pay after tax",
+              "Bonus pay"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is Net Pay?",
+            "options": [
+              "Total earnings",
+              "The actual \"take-home\" pay after taxes and deductions",
+              "Gross pay plus bonuses",
+              "Pay before tax"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "In Singapore, what is CPF?",
+            "options": [
+              "A type of tax",
+              "Central Provident Fund, a mandatory social security savings scheme",
+              "A bank name",
+              "A credit card"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: The number on your employment contract is usually your Net Pay.",
+            "options": [
+              "True",
+              "False, it is Gross Pay"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What does the employer's contribution to CPF mean?",
+            "options": [
+              "The employer takes money from you",
+              "The employer pays extra money directly into your CPF account on top of your wage",
+              "You pay the employer",
+              "It's optional"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "When eating at a restaurant in Singapore, what is typically added to your bill?",
+            "options": [
+              "Nothing extra",
+              "9% GST and 10% Service Charge",
+              "Only GST",
+              "A tip"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why is it important to check your payslip?",
+            "options": [
+              "It's not important",
+              "To ensure you are paid correctly for the hours worked and deductions are accurate",
+              "To show your friends",
+              "For social media"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If a menu item says \"$10++\", what does the \"++\" mean?",
+            "options": [
+              "It's very expensive",
+              "Plus Service Charge, plus GST",
+              "It's on discount",
+              "Extra large portion"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Part-time student workers are exempt from CPF contributions if they earn above a certain threshold.",
+            "options": [
+              "True",
+              "False, all Singaporean/PR employees earning >$500/month must contribute"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is GST?",
+            "options": [
+              "A bank fee",
+              "Goods and Services Tax, a tax on domestic consumption",
+              "A savings account",
+              "Government scholarship"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      },
+      {
+        "day_number": 7,
+        "title": "Intro to Bank Interest",
+        "video_url": "https://www.youtube.com/embed/Rm6UdfRs3gw",
+        "video_title": "How Bank Interest Works",
+        "challenge": {
+          "title": "The Snowball Effect",
+          "description": "Interactive calculator showing the difference between putting $1000 in a piggy bank (0%) vs. a high-yield savings account (4%) over 10 years.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Check Your Interest Rate",
+          "description": "Log in to your bank account (or ask your parents about yours) and find out the current interest rate you are earning.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "Why do banks pay you interest on your savings?",
+            "options": [
+              "They're generous",
+              "Because they use your deposited money to issue loans to others",
+              "It's required by law",
+              "To attract social media followers"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is \"principal\" in banking?",
+            "options": [
+              "The bank manager",
+              "The original sum of money invested or saved",
+              "Interest earned",
+              "A type of loan"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is compound interest?",
+            "options": [
+              "Simple interest doubled",
+              "Interest calculated on the initial principal AND also on the accumulated interest of previous periods",
+              "A bank penalty",
+              "Interest that only applies to loans"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Money kept in a piggy bank loses value over time due to inflation.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 0
+          },
+          {
+            "question": "If you have $100 in an account paying 5% annual interest, how much will you have after one year?",
+            "options": [
+              "$100",
+              "$105",
+              "$150",
+              "$110"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is the power of compounding often compared to?",
+            "options": [
+              "A ticking clock",
+              "A snowball rolling down a hill, getting bigger as it goes",
+              "A rocket launch",
+              "A waterfall"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Which is a better factor for growing wealth through compounding?",
+            "options": [
+              "Investing large sums later",
+              "Starting to save as early as possible",
+              "Waiting for higher rates",
+              "Keeping money in cash"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What does \"p.a.\" mean when looking at interest rates (e.g., 2% p.a.)?",
+            "options": [
+              "Per account",
+              "Per annum, or per year",
+              "Per application",
+              "Per amount"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What happens if you frequently withdraw money from a savings account?",
+            "options": [
+              "You earn more interest",
+              "You earn less compound interest over time",
+              "Nothing changes",
+              "The bank rewards you"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: All bank accounts offer the exact same interest rate.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "course-w2",
+    "title": "The Digital Trap",
+    "description": "Address modern financial pitfalls: E-payments, Buy-Now-Pay-Later (BNPL), and subscription creep.",
+    "weeks": 2,
+    "total_coins": 1400,
+    "daily_tasks": [
+      {
+        "day_number": 1,
+        "title": "The Buy-Now-Pay-Later (BNPL) Illusion",
+        "video_url": "https://www.youtube.com/embed/mWoS6PNrcgc",
+        "video_title": "The BNPL Trap",
+        "challenge": {
+          "title": "Audit the Cart",
+          "description": "A mock checkout page is shown with various payment options (Full price vs BNPL vs Credit). Select the mathematically cheapest option taking into account hidden processing fees.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Cancel an Unused Subscription",
+          "description": "Check your recurring subscriptions. Cancel at least one free trial or unused service today.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "What does BNPL stand for?",
+            "options": [
+              "Buy Now, Pay Later",
+              "Bank Note Payment Ledger",
+              "Budget Now, Plan Later",
+              "Borrow Now, Pay Less"
+            ],
+            "correct_answer": 0
+          },
+          {
+            "question": "How does BNPL make items seem more affordable?",
+            "options": [
+              "By reducing the actual price",
+              "It splits the total cost into smaller, delayed payments",
+              "By removing taxes",
+              "Through government subsidies"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is the biggest risk of using multiple BNPL services at once?",
+            "options": [
+              "Getting better deals",
+              "Losing track of payment dates and owing late fees on multiple platforms",
+              "Earning more rewards",
+              "Improving credit score"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: BNPL services never charge fees.",
+            "options": [
+              "True",
+              "False, they often charge late payment fees"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What happens if you miss a BNPL payment?",
+            "options": [
+              "Nothing",
+              "You are penalized with a late fee and it can affect your credit score",
+              "You get a discount",
+              "The item is returned automatically"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why do retailers love offering BNPL?",
+            "options": [
+              "It costs them money",
+              "It encourages consumers to spend more money than they normally would",
+              "Because the government requires it",
+              "It reduces their profits"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Which is a safer way to buy a $300 item?",
+            "options": [
+              "Use 3 different BNPL apps",
+              "Save up $300 first, then pay in full",
+              "Use a credit card you can't pay off",
+              "Borrow from friends"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Using BNPL is exactly the same as using a debit card.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If you buy a $100 shoe using \"Pay in 4\" BNPL (4 payments of $25), but miss the last payment and get a $15 late fee, what is the true cost?",
+            "options": [
+              "$100",
+              "$115",
+              "$125",
+              "$105"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Does BNPL feel like spending \"real\" money?",
+            "options": [
+              "Yes, just like cash",
+              "No, which is why it's dangerous"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      },
+      {
+        "day_number": 2,
+        "title": "Gamification and Microtransactions",
+        "video_url": "https://www.youtube.com/embed/xNjI03CGkb4",
+        "video_title": "The Dark Side of Micro-transactions",
+        "challenge": {
+          "title": "Conversion Calculator",
+          "description": "Calculate the real SGD value of a \"Special Loot Box Bundle\" priced at 4,500 in-game gems.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Remove Stored Payment Methods",
+          "description": "Go into your phone settings and turn off \"In-App Purchases\" or remove your stored credit card from an app store.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "Why do free-to-play games use \"gems\" or \"crystals\" instead of dollars?",
+            "options": [
+              "Because they're prettier",
+              "To disconnect the player from the feeling of spending real money",
+              "Legal requirements",
+              "They cost less"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is a \"dark pattern\" in app design?",
+            "options": [
+              "A night mode theme",
+              "A user interface designed to trick users into doing things, like buying unwanted items",
+              "A coding error",
+              "A color scheme"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: A $1 in-game purchase is harmless.",
+            "options": [
+              "True",
+              "False, they add up quickly and build spending habits"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is a \"Loot Box\"?",
+            "options": [
+              "A storage container",
+              "A virtual item that contains randomized rewards, similar to gambling",
+              "A free gift",
+              "A game level"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If 100 gems cost $2, how much real money is a 500 gem skin?",
+            "options": [
+              "$5",
+              "$10",
+              "$15",
+              "$20"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "How do apps create a \"Fear Of Missing Out\" (FOMO)?",
+            "options": [
+              "By being boring",
+              "By offering limited-time sales",
+              "By crashing frequently",
+              "By having bad graphics"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is \"subscription creep\"?",
+            "options": [
+              "A horror game",
+              "Gradually subscribing to multiple small services until the total monthly cost becomes unmanageable",
+              "Getting free subscriptions",
+              "A type of malware"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: You can always get a refund for accidental in-app purchases.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Which is an example of Gamification in spending?",
+            "options": [
+              "Using a calculator",
+              "Earning 'VIP points' for spending money on a shopping app",
+              "Reading a book",
+              "Walking to the store"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "The best way to prevent accidental in-app spending is to:",
+            "options": [
+              "Play more games",
+              "Unlink your credit card from the app store",
+              "Increase your spending limit",
+              "Share your password"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      },
+      {
+        "day_number": 3,
+        "title": "Credit Cards vs Debit Cards",
+        "video_url": "https://www.youtube.com/embed/ks6E5GhKjOc",
+        "video_title": "Credit vs Debit Cards Explained",
+        "challenge": {
+          "title": "Card Match",
+          "description": "Given scenarios (e.g., \"Buying a $5 coffee\", \"Booking a $1000 flight online\"), choose whether debit or credit is safer/better, balancing fraud protection against overspending risk.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Know Your Card",
+          "description": "Find out if your current ATM/Bank card is a Debit card, and check what your daily spending limit is set to.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "What happens when you pay with a debit card?",
+            "options": [
+              "The bank lends you money",
+              "The money is immediately deducted from your bank account",
+              "You pay later",
+              "Nothing happens immediately"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What happens when you pay with a credit card?",
+            "options": [
+              "Money leaves your account instantly",
+              "The bank pays the merchant, and you owe the bank that amount",
+              "It's free",
+              "You earn automatic interest"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Credit cards charge interest on your purchases from day one.",
+            "options": [
+              "True",
+              "False, interest is only charged if you don't pay the full balance by the due date"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Which card offers better protection against fraud if your details are stolen online?",
+            "options": [
+              "Debit cards",
+              "Credit cards, because it is the bank's money on the line initially",
+              "Both equally",
+              "Neither"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why are credit cards dangerous for undisciplined spenders?",
+            "options": [
+              "They're heavy to carry",
+              "They allow you to spend money you do not actually have",
+              "They have bad designs",
+              "They expire too fast"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is a credit limit?",
+            "options": [
+              "Your salary",
+              "The maximum amount the bank allows you to borrow on the card",
+              "Your savings balance",
+              "The minimum payment"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What happens if you only pay the \"Minimum Payment\" on your credit card bill?",
+            "options": [
+              "You save money",
+              "You will be charged extremely high interest on the remaining balance",
+              "The debt disappears",
+              "You get a reward"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Debit cards can cause you to fall into massive debt.",
+            "options": [
+              "True",
+              "False, you can generally only spend what you have"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why do credit cards offer points, miles, or cashback?",
+            "options": [
+              "They're generous",
+              "To incentivize you to spend more money using their card",
+              "Government mandate",
+              "To reduce fraud"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If you do not have a steady income, which card should you use?",
+            "options": [
+              "Credit card",
+              "Debit card",
+              "Both equally",
+              "Neither"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      },
+      {
+        "day_number": 4,
+        "title": "Good Debt vs Bad Debt",
+        "video_url": "https://www.youtube.com/embed/17j7Ch1LFl4",
+        "video_title": "Good Debt vs Bad Debt",
+        "challenge": {
+          "title": "Sorting Hat of Debt",
+          "description": "Categorize 5 types of loans (e.g., Student Loan, Mortgage, Credit Card Debt for a PS5) into 'Good' or 'Bad' debt buckets.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Have a Debt Conversation",
+          "description": "Have a conversation with a parent or older sibling about what they consider \"Good Debt\" and if they have any.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "What is \"Good Debt\"?",
+            "options": [
+              "Any debt that's cheap",
+              "Borrowing money to invest in something that increases in value or earning potential",
+              "Free money",
+              "Debt from friends"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Which is generally considered Good Debt?",
+            "options": [
+              "Credit card debt for clothes",
+              "A student loan for higher education",
+              "A loan for a vacation",
+              "Borrowing for a party"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is \"Bad Debt\"?",
+            "options": [
+              "Any large loan",
+              "Borrowing money for depreciating assets or consumption at high interest rates",
+              "Government debt",
+              "Student loans"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Is taking a loan to buy a brand new luxury car usually good or bad debt?",
+            "options": [
+              "Good debt",
+              "Bad debt, because cars rapidly lose value"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why is a housing loan (mortgage) often considered good debt?",
+            "options": [
+              "Houses are cheap",
+              "Because property generally appreciates in value over time",
+              "Banks like mortgages",
+              "It's tax-free"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: All debt is completely bad and should be avoided at all costs.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What makes credit card debt the \"worst\" kind of bad debt?",
+            "options": [
+              "The colors of the card",
+              "The incredibly high compound interest rates, often 20%+",
+              "It's plastic",
+              "You have to sign receipts"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Taking a personal loan to go on a luxury holiday is an example of:",
+            "options": [
+              "Good Debt",
+              "Bad Debt",
+              "No Debt",
+              "Smart investing"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is a depreciating asset?",
+            "options": [
+              "Gold",
+              "Something that loses value over time, like electronics or cars",
+              "Real estate",
+              "Savings accounts"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If a loan helps you increase your future income, it is likely:",
+            "options": [
+              "Bad Debt",
+              "Good Debt",
+              "Illegal",
+              "A scam"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      },
+      {
+        "day_number": 5,
+        "title": "E-Wallet Security",
+        "video_url": "https://www.youtube.com/embed/I-4YOuVPCOQ",
+        "video_title": "E-Wallet Safety Tips",
+        "challenge": {
+          "title": "The Rogue App",
+          "description": "A food delivery app is breached. Decide the safest configuration to have it connected to your bank (e.g., top-up only, low limit, not auto-deducting from main savings).",
+          "coins": 20
+        },
+        "task": {
+          "title": "Check Your E-Wallet Balance",
+          "description": "Check your PayLah/GrabPay balance. If it is over $100, transfer the excess funds back to your main high-yield bank account.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "Why shouldn't you connect your main savings account directly to an E-wallet via auto-deduction?",
+            "options": [
+              "It's inconvenient",
+              "If the E-wallet is compromised, hackers can drain your entire savings",
+              "Banks don't allow it",
+              "It earns less interest"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is the safest way to fund an E-wallet?",
+            "options": [
+              "Link your savings account",
+              "Manually top up small amounts only when needed",
+              "Store all your money there",
+              "Auto-deduct monthly"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: E-wallets offer the exact same level of security and insurance as traditional bank accounts.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why do scammers love stealing E-wallet access?",
+            "options": [
+              "E-wallets are orange",
+              "Funds can be transferred instantly and are hard to trace",
+              "They like apps",
+              "E-wallets have ads"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What does setting a \"transaction limit\" do?",
+            "options": [
+              "Limits your income",
+              "It restricts the maximum amount of money that can leave your account in a single day",
+              "It blocks all payments",
+              "It increases your balance"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If you lose your phone, what should your first action be regarding E-wallets?",
+            "options": [
+              "Buy a new phone",
+              "Call your bank to block the linked cards and accounts",
+              "Post on social media",
+              "Wait and see"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: You should use the same password for your E-wallet as your social media accounts.",
+            "options": [
+              "True, so you don't forget",
+              "False"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is biometrics?",
+            "options": [
+              "A type of currency",
+              "Using FaceID or fingerprint scanning to authorize payments",
+              "A bank name",
+              "A type of loan"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why is leaving a large balance (e.g., $1000) in an E-wallet a bad idea financially?",
+            "options": [
+              "It's convenient",
+              "It earns 0% interest and is exposed to security risks",
+              "E-wallets charge monthly fees",
+              "It's the safest place"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If an app asks \"Remember this card for future purchases?\", the safest answer is:",
+            "options": [
+              "Yes, for convenience",
+              "No",
+              "Maybe later",
+              "Always"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      },
+      {
+        "day_number": 6,
+        "title": "The Cost of Convenience",
+        "video_url": "https://www.youtube.com/embed/7jwTkKDHTck",
+        "video_title": "Hidden Costs of Convenience",
+        "challenge": {
+          "title": "Delivery vs Dabao",
+          "description": "Compare the exact same fast-food meal price on a delivery app vs. the physical store, revealing the hidden 30-40% markup on the menu items.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Walk and Save",
+          "description": "Instead of ordering food delivery today, walk to a nearby hawker centre or buy food directly from the store. Calculate exactly how much money you saved.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "True or False: Restaurants charge the exact same price for food on delivery apps as they do in the physical store.",
+            "options": [
+              "True",
+              "False, menu prices are often marked up by 20-30%"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is a \"Platform Fee\"?",
+            "options": [
+              "A free service",
+              "An extra charge kept by the app company for maintaining the service",
+              "The delivery driver's tip",
+              "Government tax"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why do restaurants increase their prices on delivery apps?",
+            "options": [
+              "Food costs more to cook",
+              "Because the apps take a large commission (up to 30%) from every order",
+              "They want to be exclusive",
+              "Ingredients are different"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If a meal costs $10 in-store, but $13 on the app + $3 delivery fee + $1 platform fee, what is the total \"Cost of Convenience\"?",
+            "options": [
+              "$3",
+              "$5",
+              "$7",
+              "$10"
+            ],
+            "correct_answer": 2
+          },
+          {
+            "question": "What is \"Surge Pricing\" in ride-hailing apps?",
+            "options": [
+              "A discount",
+              "Prices automatically increasing during high demand or bad weather",
+              "A loyalty program",
+              "Free rides"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Getting a $0 Delivery Fee promotion means you are paying the same as eating in the store.",
+            "options": [
+              "True",
+              "False, the food items are still marked up"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "How does using convenience apps frequently affect your budget?",
+            "options": [
+              "It saves money",
+              "It causes rapid \"lifestyle inflation\" and drains your savings",
+              "No effect",
+              "It increases income"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is the most financially sensible way to use food delivery apps?",
+            "options": [
+              "Daily for every meal",
+              "As an occasional treat, not a daily habit",
+              "Only on weekends",
+              "Never"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Which is a hidden cost of convenience?",
+            "options": [
+              "Better food quality",
+              "Missing out on the physical exercise of walking to buy food",
+              "Faster delivery",
+              "More food choices"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If you order delivery 3 times a week and pay an extra $8 each time, how much are you wasting in a month?",
+            "options": [
+              "$24",
+              "$48",
+              "Roughly $96",
+              "$120"
+            ],
+            "correct_answer": 2
+          }
+        ]
+      },
+      {
+        "day_number": 7,
+        "title": "Password Management and 2FA",
+        "video_url": "https://www.youtube.com/embed/I8IgKd0UP0o",
+        "video_title": "Password Security & 2FA",
+        "challenge": {
+          "title": "Spot the Weak Password",
+          "description": "Select the strongest password out of 4 options and explain why length is more important than complexity.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Enable 2FA",
+          "description": "Turn on 2FA (Two-Factor Authentication) for your primary email account and your most-used social media account.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "What is the biggest danger of using the same password for everything?",
+            "options": [
+              "It's hard to remember",
+              "If one website is hacked, the hackers have the password to all your other accounts",
+              "Passwords expire faster",
+              "It's illegal"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What does 2FA stand for?",
+            "options": [
+              "Two-Factor Authentication",
+              "Two-File Authorization",
+              "Two-Finger Access",
+              "Two-Form Application"
+            ],
+            "correct_answer": 0
+          },
+          {
+            "question": "How does 2FA protect you?",
+            "options": [
+              "It makes passwords longer",
+              "It requires a second piece of evidence (like a phone OTP) in addition to your password",
+              "It blocks all hackers",
+              "It creates backups"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is a Password Manager?",
+            "options": [
+              "Your browser's autofill",
+              "A secure app that generates and remembers unique passwords for every site",
+              "A type of lock",
+              "An antivirus"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Adding an exclamation mark to the end of a dictionary word (e.g., Password123!) makes it highly secure.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is stronger: A short complex password (d$4!K) or a long passphrase (correct-horse-battery-staple)?",
+            "options": [
+              "The short complex password",
+              "A long passphrase because length exponentially increases cracking time"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If your email account is hacked, why is it extremely dangerous?",
+            "options": [
+              "You lose your emails",
+              "Hackers can use it to reset the passwords for all your other accounts, including banking",
+              "Your contacts get spam",
+              "Nothing serious"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: You should write your banking password on a sticky note attached to your laptop.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is an Authenticator App (e.g., Google Authenticator)?",
+            "options": [
+              "A social media app",
+              "An app that generates temporary 2FA codes that change every 30 seconds",
+              "A password storage app",
+              "A banking app"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Which is considered less secure for 2FA: SMS/Text Messages or an Authenticator App?",
+            "options": [
+              "Authenticator App",
+              "SMS, because SIM cards can be swapped/hijacked"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "course-w3",
+    "title": "The Scam Dojo",
+    "description": "Transition from theory to high-stress, gamified simulation to build resistance against modern scams.",
+    "weeks": 3,
+    "total_coins": 1400,
+    "daily_tasks": [
+      {
+        "day_number": 1,
+        "title": "The \"Immediate Action\" Trap (Phishing & Impersonation)",
+        "video_url": "https://www.youtube.com/embed/XBkzBrXlle0",
+        "video_title": "Phishing & Impersonation Scams",
+        "challenge": {
+          "title": "The Fake HR Recruiter",
+          "description": "A simulated WhatsApp chat with a \"recruiter\". Tap the 3 red flags (unprofessional number, request for upfront deposit, encrypted app redirect).",
+          "coins": 20
+        },
+        "task": {
+          "title": "Clean Your Inbox",
+          "description": "Review your SMS or Email inbox. Identify and delete one suspicious/phishing message.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "What emotion do scammers try to trigger first?",
+            "options": [
+              "Joy",
+              "Panic or Urgency",
+              "Boredom",
+              "Nostalgia"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Will a legitimate government agency ask for your bank password over the phone?",
+            "options": [
+              "Yes, if it's urgent",
+              "Never"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What does it mean if a message says \"Act now or your account will be suspended\"?",
+            "options": [
+              "You should act immediately",
+              "It is likely a scam attempting to create urgency",
+              "Your account is really in danger",
+              "The bank is updating"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Which of these links is the safest to click?",
+            "options": [
+              "www.dbs-secure-update.com",
+              "www.bank-verify.net",
+              "None, you should manually type the official URL into your browser",
+              "Any .com link is safe"
+            ],
+            "correct_answer": 2
+          },
+          {
+            "question": "True or False: Scammers can spoof Caller ID to make it look like the police are calling.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 0
+          },
+          {
+            "question": "What is a \"Safe Account\" impersonation scam?",
+            "options": [
+              "A real service from your bank",
+              "A scammer pretending to be police telling you to move funds to a 'safe account' they control",
+              "An account with extra security",
+              "A government program"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If your \"bank\" texts you a link to verify a transaction, what should you do?",
+            "options": [
+              "Click the link immediately",
+              "Ignore the link and open the official banking app directly",
+              "Forward it to friends",
+              "Reply with your details"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "How can you verify official Singapore government links?",
+            "options": [
+              "They use .com",
+              "Check that the URL ends in .gov.sg",
+              "They have colorful logos",
+              "They come via WhatsApp"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Phishing refers only to email scams.",
+            "options": [
+              "True",
+              "False, it happens via SMS, social media, and calls"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is the exact protocol to report a scam in Singapore?",
+            "options": [
+              "Post on social media",
+              "Call the anti-scam helpline or report via the ScamShield app",
+              "Email your friends",
+              "Ignore it"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      },
+      {
+        "day_number": 2,
+        "title": "The \"Get Rich Quick\" Syndicates (MLMs & Fake Jobs)",
+        "video_url": "https://www.youtube.com/embed/s6MwGeOm8iI",
+        "video_title": "MLM & Fake Job Scams",
+        "challenge": {
+          "title": "The High School Reunion",
+          "description": "A simulated chat where an old classmate pitches a \"business opportunity\". Select assertive dialogue options to shut it down.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Research Task Scams",
+          "description": "Search online for \"Task Scam Singapore\" and read one news article about how it starts.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "In a pyramid scheme, where does the real money come from?",
+            "options": [
+              "Product sales",
+              "Recruiting new members underneath you, not selling products",
+              "Government grants",
+              "Bank interest"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: The bottom 99% of a pyramid scheme always lose money.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 0
+          },
+          {
+            "question": "What is an \"E-commerce Task Scam\"?",
+            "options": [
+              "A legitimate online job",
+              "Being paid small amounts initially to 'like' items, before being asked to pay large deposits for bigger jobs",
+              "Working for Amazon",
+              "Selling handmade goods online"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why do task scammers actually pay you a small real commission ($10) in the first round?",
+            "options": [
+              "They're generous",
+              "To build psychological trust before asking for your money",
+              "It's required by law",
+              "They made a mistake"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If a job offer requires you to pay an \"onboarding fee\", what is it likely to be?",
+            "options": [
+              "Normal practice",
+              "A scam",
+              "A government requirement",
+              "Standard HR process"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What phrase is a massive red flag for investment scams?",
+            "options": [
+              "Invest responsibly",
+              "Guaranteed high returns with zero risk",
+              "Past performance doesn't guarantee future results",
+              "Terms and conditions apply"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "How do \"Get Rich Quick\" scammers typically contact victims?",
+            "options": [
+              "Official mail",
+              "Via random WhatsApp, Telegram, or Instagram messages",
+              "Through banks",
+              "At government offices"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If an old friend suddenly messages you praising a new \"financial mentor\", what is likely happening?",
+            "options": [
+              "They found a great opportunity",
+              "Their account was hacked or they are trapped in a pyramid scheme",
+              "They became an expert",
+              "They're being helpful"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Which is a sign of a fake job listing?",
+            "options": [
+              "Requires a resume",
+              "Extremely high pay for simple tasks like 'data entry via mobile'",
+              "Has an interview process",
+              "Lists company address"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Scammers often use screenshots of fake bank transfers to prove their \"business\" works.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 0
+          }
+        ]
+      },
+      {
+        "day_number": 3,
+        "title": "Romance & Pig Butchering Scams",
+        "video_url": "https://www.youtube.com/embed/biFaoaXkCfI",
+        "video_title": "Romance & Pig Butchering Scams",
+        "challenge": {
+          "title": "The Too-Perfect Match",
+          "description": "Review a dating app profile and chat logs to spot the red flags (refuses video calls, talks about crypto early, sudden wealth, claims to live overseas).",
+          "coins": 20
+        },
+        "task": {
+          "title": "Review Your Privacy Settings",
+          "description": "Review the privacy settings on your social media accounts and ensure your friend list and contact info are not public.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "What is a \"Pig Butchering\" scam?",
+            "options": [
+              "A farming scam",
+              "Fattening up a victim with trust and small investment returns before stealing a massive sum",
+              "A food delivery fraud",
+              "A cooking class scam"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "How do romance scammers often initiate contact?",
+            "options": [
+              "Through official dating agencies",
+              "A \"wrong number\" text, an Instagram DM, or a dating app match",
+              "Through your bank",
+              "Via your employer"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why do romance scammers refuse to do live video calls?",
+            "options": [
+              "Bad internet",
+              "Because they are using stolen photos of attractive people",
+              "They're shy",
+              "Time zone differences"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Romance scams only target lonely elderly people.",
+            "options": [
+              "True",
+              "False, young professionals are huge targets for crypto variations"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is the turning point in a romance/pig butchering scam?",
+            "options": [
+              "They ask to meet in person",
+              "When the scammer shifts the conversation from romance to a \"guaranteed\" investment opportunity",
+              "They send flowers",
+              "They ask for your photo"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If an online friend of 3 months asks you to invest in a new trading platform, what should you do?",
+            "options": [
+              "Invest immediately",
+              "Block them immediately",
+              "Ask for more details",
+              "Send a small amount first"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "How do scammers gain your trust initially?",
+            "options": [
+              "Government endorsement",
+              "By mirroring your interests, being overly supportive, and talking daily",
+              "Through advertisements",
+              "Via official channels"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Scammers will sometimes help you make a small, real profit of $50 early on.",
+            "options": [
+              "True, it proves the platform is \"real\" so you invest more",
+              "False"
+            ],
+            "correct_answer": 0
+          },
+          {
+            "question": "What happens when you try to withdraw your large \"earnings\" from the scammer's platform?",
+            "options": [
+              "You get your money immediately",
+              "They freeze the account and demand a \"20% tax fee\" to unlock it",
+              "A check arrives by mail",
+              "The money transfers instantly"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why is it dangerous to send compromising photos to someone you met online?",
+            "options": [
+              "Bad camera quality",
+              "They can be used for blackmail/extortion",
+              "It uses too much data",
+              "It's against the law to take photos"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      },
+      {
+        "day_number": 4,
+        "title": "Deepfakes & AI Impersonation",
+        "video_url": "https://www.youtube.com/embed/pkN_5jS-S8E",
+        "video_title": "Deepfakes & AI Scams",
+        "challenge": {
+          "title": "Real or Fake?",
+          "description": "Identify subtle signs of Deepfake videos (unnatural blinking, weird skin textures, audio out of sync, bizarre requests from authority figures).",
+          "coins": 20
+        },
+        "task": {
+          "title": "Set a Family Safeword",
+          "description": "Agree on a secret \"safeword\" or question with your immediate family members to verify their identity if they ever call from an unknown number.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "What is a Deepfake?",
+            "options": [
+              "A type of filter",
+              "AI-generated media that convincingly replaces someone's likeness or voice",
+              "A fake news article",
+              "A hacking technique"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "How much audio does an AI need to clone someone's voice?",
+            "options": [
+              "30 minutes",
+              "Sometimes as little as 3 seconds, easily taken from social media",
+              "An entire conversation",
+              "At least an hour"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If \"Elon Musk\" is doing a live stream offering to double any crypto you send him, what is it?",
+            "options": [
+              "A real offer",
+              "An AI deepfake scam",
+              "A charity event",
+              "A legitimate promotion"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is a good way to verify a distress call from a family member on an unknown number?",
+            "options": [
+              "Send money immediately",
+              "Ask a personal question only they would know, or use your family safeword",
+              "Call them back on the same number",
+              "Text them"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Deepfakes are always easy to spot because the graphics look like a cartoon.",
+            "options": [
+              "True",
+              "False, modern deepfakes are nearly indistinguishable to the naked eye"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If you see a news clip on Facebook of a government minister promoting a trading app, what should you assume?",
+            "options": [
+              "It's endorsed by the government",
+              "It is almost certainly an AI deepfake",
+              "It's a new government program",
+              "You should invest immediately"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is a visual clue that a video might be a deepfake?",
+            "options": [
+              "High resolution",
+              "Unnatural blinking patterns and blurring around the mouth/teeth",
+              "Good lighting",
+              "Professional background"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why do deepfake video scams often require you to act \"within the next 10 minutes\"?",
+            "options": [
+              "Because the offer is real",
+              "To trigger panic or FOMO so you don't take time to verify the video",
+              "Server limitations",
+              "Time-sensitive technology"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "How can you verify a shocking video of a celebrity endorsement?",
+            "options": [
+              "Share it with friends first",
+              "Check reputable news sites and the celebrity's official, verified social media channels",
+              "Trust the video",
+              "Look at the comments"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: AI voice cloning can be used to bypass voice-recognition security at some banks.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 0
+          }
+        ]
+      },
+      {
+        "day_number": 5,
+        "title": "Fake Investment Platforms",
+        "video_url": "https://www.youtube.com/embed/SZ3bAncBrSk",
+        "video_title": "Spotting Fake Investment Platforms",
+        "challenge": {
+          "title": "The Withdrawal Trap",
+          "description": "You're in a simulation of a fake crypto app. Try to withdraw your $10,000 \"profit\" — you're hit with \"Account frozen. Pay 20% tax to release funds.\" Identify this as the final stage of the scam.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Check the MAS Alert List",
+          "description": "Search for the \"MAS Investor Alert List\" online to see what official government warnings against unregulated platforms look like.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "What is the primary lure of a fake investment platform?",
+            "options": [
+              "Good customer service",
+              "Promises of guaranteed, unusually high daily returns",
+              "Government backing",
+              "Low fees"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "When you log into a fake trading app, what are the numbers you see?",
+            "options": [
+              "Real market data",
+              "Completely fake numbers manipulated by the scammer to look like profit",
+              "Delayed market data",
+              "Your actual balance"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: If an investment app is on the official App Store, it is 100% safe.",
+            "options": [
+              "True",
+              "False, scam apps sometimes slip past reviewers"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is the \"Withdrawal Tax\" tactic?",
+            "options": [
+              "A real government tax",
+              "When you try to withdraw, the platform demands a massive extra fee to release it",
+              "A banking procedure",
+              "Standard brokerage fees"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If you pay the \"Tax\" or \"Admin Fee\" to withdraw your funds, what happens?",
+            "options": [
+              "You get your money",
+              "You lose that money too, and they still won't release your funds",
+              "They process it in 3 days",
+              "You earn more interest"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Who regulates legitimate investment platforms in Singapore?",
+            "options": [
+              "The police",
+              "The Monetary Authority of Singapore (MAS)",
+              "Social media companies",
+              "Private auditors"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What happens if you invest with a company on the MAS Investor Alert List?",
+            "options": [
+              "Extra protection",
+              "You have zero legal protection when they steal your money",
+              "Government insurance covers you",
+              "You get priority support"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why do scam platforms ask you to deposit via cryptocurrency or wire transfers?",
+            "options": [
+              "They're modern",
+              "Because those methods are irreversible and hard to trace",
+              "For faster processing",
+              "Lower fees"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "\"Join this exclusive VIP Telegram group for trading signals.\" What is this commonly?",
+            "options": [
+              "A great opportunity",
+              "A pump-and-dump scheme or fake investment platform",
+              "Free education",
+              "Government program"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Legitimate banks and brokers will never ask you to pay a tax deposit before you can withdraw.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 0
+          }
+        ]
+      },
+      {
+        "day_number": 6,
+        "title": "Malware & Sideloaded Apps",
+        "video_url": "https://www.youtube.com/embed/n8mbzU0X2nQ",
+        "video_title": "Malware & Sideloaded App Dangers",
+        "challenge": {
+          "title": "The Shady APK",
+          "description": "You see an ad for a 50% discount on cinema tickets but must download a file called Tickets_Discount_v2.apk via WhatsApp. Actively hit \"Reject & Block\".",
+          "coins": 20
+        },
+        "task": {
+          "title": "Check Your Phone Security",
+          "description": "Check your phone settings (Android: Security settings) and ensure \"Install Unknown Apps\" or \"Developer Mode\" is disabled unless you actively need it.",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "What does \"sideloading\" an app mean?",
+            "options": [
+              "Installing from the App Store",
+              "Installing an app from an unverified source outside the official App/Play Store",
+              "Updating an app",
+              "Deleting an app"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "On Android, what file extension is commonly used for sideloaded apps?",
+            "options": [
+              ".exe",
+              ".apk",
+              ".pdf",
+              ".doc"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "How do scammers trick victims into downloading malware?",
+            "options": [
+              "Through official channels",
+              "By offering huge discounts on services but forcing the victim to 'book via our special app'",
+              "Through bank emails",
+              "Via government notices"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Once installed, what dangerous permission do malware apps often ask for?",
+            "options": [
+              "Camera only",
+              "Accessibility services or SMS viewing",
+              "Wi-Fi access",
+              "Bluetooth"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why does the malware want to read your SMS messages?",
+            "options": [
+              "To send spam",
+              "To intercept the One-Time Passwords (OTPs) your bank sends you",
+              "For market research",
+              "To check your contacts"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: If an app icon looks like a legitimate cleaning company, the app is safe.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is a sign that your phone might be infected with malware?",
+            "options": [
+              "Everything is normal",
+              "The battery drains unusually fast, the phone is hot, and apps open by themselves",
+              "It runs faster",
+              "Better reception"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If a Facebook ad for \"Cheap Seafood\" sends you a WhatsApp link to download their ordering app, what should you do?",
+            "options": [
+              "Download it for the deals",
+              "Block the number and do not click the link",
+              "Share with friends first",
+              "Click to check if it's real"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Why is it dangerous to give an unverified app \"Accessibility\" permissions?",
+            "options": [
+              "It slows your phone",
+              "It allows the app to control your screen and tap buttons on your behalf",
+              "It uses more data",
+              "It changes your wallpaper"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is the safest way to download apps?",
+            "options": [
+              "From WhatsApp links",
+              "Only use the official Apple App Store or Google Play Store",
+              "From email attachments",
+              "From Facebook ads"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      },
+      {
+        "day_number": 7,
+        "title": "The Final Audit - Comprehensive Simulation",
+        "video_url": "https://www.youtube.com/embed/aO858HyFbKI",
+        "video_title": "Scam Defense Recap",
+        "challenge": {
+          "title": "The Ultimate Gauntlet",
+          "description": "A rapid-fire simulation of 3 different scams occurring simultaneously: an urgent call from \"Singpost\", a WhatsApp from \"HR\" about a job, and an Instagram DM about crypto. Correctly identify, block, and report all 3.",
+          "coins": 20
+        },
+        "task": {
+          "title": "Install ScamShield",
+          "description": "Download and install the ScamShield app by the Singapore Government (or help an elderly relative install and configure it on their phone today).",
+          "coins": 30
+        },
+        "quiz_questions": [
+          {
+            "question": "Which combination of emotions do scammers rely on most?",
+            "options": [
+              "Joy and excitement",
+              "Fear and Greed",
+              "Boredom and curiosity",
+              "Love and trust"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is the golden rule when receiving a call from \"The Police\" asking for money/passwords?",
+            "options": [
+              "Cooperate fully",
+              "Hang up immediately, the real police never ask for money/passwords",
+              "Give partial information",
+              "Ask them to call back"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If something sounds too good to be true, it probably is. This describes which scam type?",
+            "options": [
+              "Phishing",
+              "Investment/Get Rich Quick Scams",
+              "Malware",
+              "Identity theft"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is the purpose of the ScamShield app?",
+            "options": [
+              "To invest money",
+              "To automatically block known scam calls and SMSes in Singapore",
+              "To manage passwords",
+              "To track expenses"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "True or False: Scammers only target the elderly and technologically illiterate.",
+            "options": [
+              "True",
+              "False, anyone can be caught off-guard or manipulated"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Your parcel delivery 'failed'. Click here: www.singp0st-update.com. What is wrong?",
+            "options": [
+              "Nothing, it's legitimate",
+              "The URL is fake (singp0st) and it's a phishing attempt",
+              "You need to update your address",
+              "Your parcel was damaged"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "If your friend messages asking you to buy them Steam gift cards urgently, what should you do?",
+            "options": [
+              "Buy them immediately",
+              "Call them directly on the phone to verify their identity",
+              "Send the gift card codes via text",
+              "Ask which ones they want"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is the most irreversible form of payment that scammers demand?",
+            "options": [
+              "Cash",
+              "Cryptocurrency or Wire Transfers",
+              "Credit card",
+              "PayNow"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "Who is responsible for protecting your money from authorized push payment scams?",
+            "options": [
+              "The bank",
+              "You are; the bank usually cannot recover the funds",
+              "The government",
+              "The police"
+            ],
+            "correct_answer": 1
+          },
+          {
+            "question": "What is the best defense against all scams?",
+            "options": [
+              "Avoid the internet",
+              "Pause, verify independently, and never act out of panic",
+              "Trust everyone",
+              "Only use cash"
+            ],
+            "correct_answer": 1
+          }
+        ]
+      }
+    ]
+  }
+]

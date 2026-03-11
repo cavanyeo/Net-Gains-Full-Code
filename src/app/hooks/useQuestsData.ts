@@ -104,8 +104,9 @@ export function useQuestsData() {
         let activeFound = false;
 
         const mappedCourses: CourseData[] = dbCourses.map((c, index) => {
-          const completedDays = progressCountByCourse[c.id] || 0;
           const totalDays = 7; // Assuming 7 days per week
+          const isMasterUnlocked = localStorage.getItem('ng_master_unlocked') === 'true';
+          const completedDays = isMasterUnlocked ? totalDays : (progressCountByCourse[c.id] || 0);
           
           let status: "active" | "locked" | "completed" = "locked";
           if (completedDays >= totalDays) {

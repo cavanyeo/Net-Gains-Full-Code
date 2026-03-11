@@ -1,11 +1,12 @@
 import { useNavigate, useLocation } from "react-router";
-import { Home, Sword, Gift } from "lucide-react";
+import { Home, Sword, Gift, User } from "lucide-react";
 import { motion } from "motion/react";
 
 const tabs = [
   { label: "Home", icon: Home, path: "/" },
   { label: "Quests", icon: Sword, path: "/courses" },
   { label: "Rewards", icon: Gift, path: "/rewards" },
+  { label: "Profile", icon: User, path: "/profile" },
 ];
 
 export function BottomNav() {
