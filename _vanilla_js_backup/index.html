@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Net Gains</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="index.css">
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#FFFEE5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+
+<body>
+    <div id="app-container">
+        <!-- Login Overlay -->
+        <div id="login-overlay" class="modal-overlay modal-overlay--full">
+            <div class="login-card">
+                <div class="login-logo">
+                    <i class="ph-duotone ph-coins login-icon"></i>
+                    <h2>Net Gains</h2>
+                </div>
+                <p class="login-subtitle">Your journey to financial literacy starts here.</p>
+                <button class="btn-secondary login-btn" id="btn-google-login">
+                    <i class="ph-bold ph-google-logo"></i>
+                    Sign in with Google
+                </button>
+                <button class="btn-secondary login-btn" id="btn-guest-login" style="margin-top: 10px; background-color: var(--surface-light); color: var(--text-primary); border: 1px solid var(--border-color);">
+                    <i class="ph-bold ph-user"></i>
+                    Continue as Guest
+                </button>
+            </div>
+        </div>
+
+        <!-- Onboarding Overlay -->
+        <div id="onboarding-overlay" class="modal-overlay"></div>
+
+        <!-- Info / Locked Modal Overlay -->
+        <div id="info-modal" class="modal-overlay"></div>
+
+        <!-- Task Modal Overlay (full screen) -->
+        <div id="task-modal" class="modal-overlay modal-overlay--full"></div>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Home View -->
+            <section id="view-home" class="view active">
+                <div class="view-header">
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="view-body">
+                    <!-- Populated by dashboard.js -->
+                </div>
+            </section>
+
+            <!-- Quests View -->
+            <section id="view-quests" class="view">
+                <div class="view-header">
+                    <h1>Quests</h1>
+                </div>
+                <div class="view-body">
+                    <!-- Populated by quests.js -->
+                </div>
+            </section>
+
+            <!-- Rewards View -->
+            <section id="view-rewards" class="view">
+                <div class="view-header">
+                    <h1>Rewards Center</h1>
+                </div>
+                <div class="view-body">
+                    <!-- Populated by rewards.js -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav id="bottom-nav">
+            <button class="nav-item active" data-target="view-home">
+                <i class="ph-duotone ph-squares-four"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-item" data-target="view-quests">
+                <i class="ph-duotone ph-flag"></i>
+                <span>Quests</span>
+            </button>
+            <button class="nav-item" data-target="view-rewards">
+                <i class="ph-duotone ph-gift"></i>
+                <span>Rewards</span>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Application Script -->
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>

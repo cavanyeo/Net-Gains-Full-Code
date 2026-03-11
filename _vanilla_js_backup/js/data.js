@@ -7,6 +7,14 @@ export async function fetchCourses() {
     if (cachedCourses) return cachedCourses;
 
     try {
+        // Check for guest session first
+        const isGuest = localStorage.getItem('ng_user_id')?.startsWith('guest_');
+        
+        // Either query Supabase, or artificially throw to trigger fallback
+        if (isGuest) {
+            throw new Error('Guest session: Skipping Supabase fetch for courses.');
+        }
+
         const { data: courses, error } = await supabase
             .from('courses')
             .select(`
@@ -94,6 +102,13 @@ export async function fetchRewards() {
     if (cachedRewards) return cachedRewards;
 
     try {
+        // Check for guest session first
+        const isGuest = localStorage.getItem('ng_user_id')?.startsWith('guest_');
+        
+        if (isGuest) {
+            throw new Error('Guest session: Skipping Supabase fetch for rewards.');
+        }
+
         const { data: rewards, error } = await supabase
             .from('rewards')
             .select('id:slug, title, description, icon, cost, tier')

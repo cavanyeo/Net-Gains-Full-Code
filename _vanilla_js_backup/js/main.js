@@ -21,12 +21,27 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
+    // Setup guest login button listener
+    const btnGuestLogin = document.getElementById('btn-guest-login');
+    if (btnGuestLogin) {
+        btnGuestLogin.addEventListener('click', () => {
+            initializeGuestApp();
+        });
+    }
+
     // Check for existing session
     const session = await getSession();
     
+    // Check if we are already in a guest session (persisted via localStorage)
+    const storedUserId = localStorage.getItem('ng_user_id');
+    const isGuestSession = storedUserId && storedUserId.startsWith('guest_');
+
     if (session) {
-        // User is authenticated
+        // User is authenticated via Supabase
         await initializeApp(session);
+    } else if (isGuestSession) {
+        // User previously chose to continue as guest
+        initializeGuestApp();
     } else {
         // No session: show login overlay
         const loginOverlay = document.getElementById('login-overlay');
@@ -36,10 +51,52 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Listen for auth changes (e.g. sign out)
     onAuthStateChange((event, session) => {
         if (event === 'SIGNED_OUT') {
+            // Also clear any guest session marker
+            localStorage.removeItem('ng_user_id');
             window.location.reload();
         }
     });
 });
+
+/**
+ * Initializes the app for a guest user (local-only storage).
+ */
+function initializeGuestApp() {
+    const loginOverlay = document.getElementById('login-overlay');
+    if (loginOverlay) loginOverlay.classList.remove('active');
+
+    // Generate or retrieve a guest ID
+    let guestId = localStorage.getItem('ng_user_id');
+    if (!guestId || !guestId.startsWith('guest_')) {
+        guestId = 'guest_' + Math.random().toString(36).substring(2, 9);
+        localStorage.setItem('ng_user_id', guestId);
+    }
+
+    // Initialise the data store with the guest ID
+    store.init(guestId);
+
+    // Set guest user details
+    store.updateUser({ 
+        name: 'Guest User', 
+        email: 'Local Session' 
+    });
+
+    // Initialise navigation
+    initNavigation();
+
+    // Check for onboarding
+    if (!store.isOnboardingComplete()) {
+        showOnboarding();
+    } else {
+        // Render the initial active view
+        renderActiveView('view-home');
+    }
+
+    // Listen for task completion events to refresh the dashboard
+    window.addEventListener('ng:taskCompleted', () => {
+        renderActiveView(getActiveViewId());
+    });
+}
 
 /**
  * Initializes the main app UI after successful authentication.
