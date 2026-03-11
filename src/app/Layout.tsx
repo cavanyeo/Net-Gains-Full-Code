@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 import { BottomNav } from "./components/BottomNav";
 import { useAuth } from "./contexts/AuthContext";
 import LoginScreen from "./components/LoginScreen";
+import { OnboardingModal } from "./components/OnboardingModal";
 
 export default function Layout() {
   const { user, guestMode, loading } = useAuth();
@@ -53,6 +54,8 @@ export default function Layout() {
 
       {/* Bottom Navigation */}
       <BottomNav />
+      {/* Onboarding Modal Overlay */}
+      <OnboardingModal />
     </div>
   );
 }
