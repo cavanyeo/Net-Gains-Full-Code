@@ -42,7 +42,7 @@ export function useRewardsData() {
         const { data: ledger } = await supabase
           .from('coin_ledger')
           .select('amount')
-          .eq('user_id', user!.id);
+          .eq('user_id', user!.auth_id);
           
         const coins = ledger?.reduce((sum, txn) => sum + txn.amount, 0) || 0;
         setTotalCoins(coins);
@@ -89,10 +89,10 @@ export function useRewardsData() {
       }
     }
 
-    if (user?.id || guestMode) {
+    if (user?.auth_id || guestMode) {
       fetchRewards();
     }
-  }, [user?.id, guestMode]);
+  }, [user?.auth_id, guestMode]);
 
   return { rewards, totalCoins, loading };
 }

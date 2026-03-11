@@ -90,7 +90,7 @@ export function useQuestsData() {
         const { data: userProgress } = await supabase
           .from('user_progress')
           .select('course_id, status')
-          .eq('user_id', user!.id)
+          .eq('user_id', user!.auth_id)
           .eq('status', 'completed');
 
         // Map progress
@@ -145,10 +145,10 @@ export function useQuestsData() {
       }
     }
 
-    if (user?.id || guestMode) {
+    if (user?.auth_id || guestMode) {
       fetchQuests();
     }
-  }, [user?.id, guestMode]);
+  }, [user?.auth_id, guestMode]);
 
   return { courses, loading };
 }

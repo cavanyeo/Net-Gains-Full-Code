@@ -62,12 +62,12 @@ export function useDashboardData(): DashboardData {
         let weeklyCoins = 0;
         let completedDays = 0;
 
-        if (course && user?.id) {
+        if (course && user?.auth_id) {
           // 2. Fetch weekly coins (similar to store.js logic)
           const { data: ledger } = await supabase
             .from('coin_ledger')
             .select('amount, transaction_type, description')
-            .eq('user_id', user.id)
+            .eq('user_id', user.auth_id)
             .in('transaction_type', ['task', 'streak_bonus'])
             .like('description', `%${course.slug}%`);
 
@@ -77,7 +77,7 @@ export function useDashboardData(): DashboardData {
           const { count } = await supabase
              .from('user_progress')
              .select('*', { count: 'exact', head: true })
-             .eq('user_id', user.id)
+             .eq('user_id', user.auth_id)
              .eq('course_id', course.id)
              .eq('status', 'completed');
              
@@ -107,10 +107,10 @@ export function useDashboardData(): DashboardData {
       }
     }
 
-    if (user?.id || guestMode) {
+    if (user?.auth_id || guestMode) {
       loadData();
     }
-  }, [user?.id, guestMode]);
+  }, [user?.auth_id, guestMode]);
 
   return { ...data, loading };
 }
