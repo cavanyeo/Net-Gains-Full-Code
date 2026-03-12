@@ -416,7 +416,7 @@ export function HomeDashboard() {
                 fontWeight: 800,
               }}
             >
-              {user?.name || "Ready to learn"}
+              {user?.username || "Ready to learn"}
             </h1>
           </div>
 

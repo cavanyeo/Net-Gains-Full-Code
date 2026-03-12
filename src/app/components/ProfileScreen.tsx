@@ -5,7 +5,7 @@ import { LogOut, Settings, Award } from "lucide-react";
 export function ProfileScreen() {
   const { user, signOut } = useAuth();
 
-  const initials = user?.name ? user.name.charAt(0).toUpperCase() : 'U';
+  const initials = user?.username ? user.username.charAt(0).toUpperCase() : 'U';
 
   return (
     <div className="space-y-6 pb-20">
@@ -22,7 +22,7 @@ export function ProfileScreen() {
           {initials}
         </div>
         
-        <h1 className="text-2xl font-bold text-[#544739] z-10">{user?.name || "Ready to learn"}</h1>
+        <h1 className="text-2xl font-bold text-[#544739] z-10">{user?.username || "Ready to learn"}</h1>
         <p className="text-[#544739]/60 text-sm z-10 mb-4">{user?.email || "No email provided"}</p>
         
         <div className="flex items-center gap-4 z-10">

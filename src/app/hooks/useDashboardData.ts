@@ -33,7 +33,6 @@ export function useDashboardData(): DashboardData {
       }
 
       if (guestMode) {
-        // Guest mode mock data
         setData({
           weeklyCoins: 150,
           weeklyGoal: 700,
@@ -62,27 +61,27 @@ export function useDashboardData(): DashboardData {
         let weeklyCoins = 0;
         let completedDays = 0;
 
-        if (course && user?.auth_id) {
-          // 2. Fetch weekly coins (similar to store.js logic)
+        // user.id is the DB row UUID, used as FK in other tables
+        if (course && user?.id) {
+          // 2. Fetch weekly coins from coin_ledger
+          // coin_ledger columns: id, user_id, amount, reason, created_at
           const { data: ledger } = await supabase
             .from('coin_ledger')
-            .select('amount, transaction_type, description')
-            .eq('user_id', user.auth_id)
-            .in('transaction_type', ['task', 'streak_bonus'])
-            .like('description', `%${course.slug}%`);
+            .select('amount, reason')
+            .eq('user_id', user.id);
 
           weeklyCoins = ledger?.reduce((sum, txn) => sum + txn.amount, 0) || 0;
 
-          // 3. Fetch completed days
+          // 3. Fetch completed days from user_progress
+          // user_progress columns: id, user_id, course_id, task_id, status, quiz_score, attempts, completed_at, created_at
           const { count } = await supabase
              .from('user_progress')
              .select('*', { count: 'exact', head: true })
-             .eq('user_id', user.auth_id)
+             .eq('user_id', user.id)
              .eq('course_id', course.id)
              .eq('status', 'completed');
              
-          const isMasterUnlocked = localStorage.getItem('ng_master_unlocked') === 'true';
-          completedDays = isMasterUnlocked ? 7 : (count || 0);
+          completedDays = count || 0;
         }
 
         const weeklyGoal = 700;
@@ -93,7 +92,7 @@ export function useDashboardData(): DashboardData {
           weeklyGoal,
           progressPercent,
           currentCourse: course ? {
-            id: course.slug,
+            id: course.slug || course.id,
             title: course.title,
             week_number: course.week_number || 1,
             completed_days: completedDays,
@@ -109,6 +108,8 @@ export function useDashboardData(): DashboardData {
 
     if (user?.auth_id || guestMode) {
       loadData();
+    } else {
+      setLoading(false);
     }
   }, [user?.auth_id, guestMode]);
 

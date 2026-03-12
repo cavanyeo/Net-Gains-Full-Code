@@ -39,49 +39,51 @@ export function useRewardsData() {
 
       try {
         // Fetch coin balance from ledger
-        const { data: ledger } = await supabase
-          .from('coin_ledger')
-          .select('amount')
-          .eq('user_id', user!.auth_id);
-          
-        const coins = ledger?.reduce((sum, txn) => sum + txn.amount, 0) || 0;
-        setTotalCoins(coins);
+        // coin_ledger columns: id, user_id, amount, reason, created_at
+        if (user?.id) {
+          const { data: ledger } = await supabase
+            .from('coin_ledger')
+            .select('amount')
+            .eq('user_id', user.id);
+            
+          const coins = ledger?.reduce((sum, txn) => sum + txn.amount, 0) || 0;
+          setTotalCoins(coins);
 
-        // Fetch rewards
-        const { data: dbRewards } = await supabase
-          .from('rewards')
-          .select('*')
-          .eq('is_active', true)
-          .order('cost', { ascending: true });
+          // Fetch rewards
+          const { data: dbRewards } = await supabase
+            .from('rewards')
+            .select('*')
+            .eq('is_active', true)
+            .order('cost', { ascending: true });
 
-        // Map DB rewards to UI rewards
-        const mappedRewards: RewardData[] = (dbRewards || []).map((r, index) => {
-          // Provide some default colors and icons if not in DB
-          const colors = {
-            "Bronze": "#CD7F32",
-            "Silver": "#C0C0C0",
-            "Gold": "#FFD700",
-            "Platinum": "#E5E4E2"
-          };
-          
-          let tier = r.tier || "Bronze";
-          if (!colors[tier as keyof typeof colors]) tier = "Bronze";
-          
-          const color = colors[tier as keyof typeof colors];
+          const mappedRewards: RewardData[] = (dbRewards || []).map((r) => {
+            const colors = {
+              "bronze": "#CD7F32",
+              "silver": "#C0C0C0",
+              "gold": "#FFD700",
+              "platinum": "#E5E4E2"
+            };
+            
+            const tier = r.tier || "bronze";
+            const color = colors[tier as keyof typeof colors] || "#CD7F32";
 
-          return {
-            id: r.slug || r.id,
-            title: r.title,
-            description: r.description || "Earn rewards by learning.",
-            cost: r.cost,
-            tier: tier as "Bronze" | "Silver" | "Gold" | "Platinum",
-            icon: r.icon || "🎁",
-            available: coins >= r.cost,
-            color
-          };
-        });
+            // Capitalize first letter of tier for display
+            const displayTier = tier.charAt(0).toUpperCase() + tier.slice(1);
 
-        setRewards(mappedRewards);
+            return {
+              id: r.slug || r.id,
+              title: r.title,
+              description: r.description || "Earn rewards by learning.",
+              cost: r.cost,
+              tier: displayTier as "Bronze" | "Silver" | "Gold" | "Platinum",
+              icon: r.icon || "🎁",
+              available: coins >= r.cost,
+              color
+            };
+          });
+
+          setRewards(mappedRewards);
+        }
       } catch (e) {
         console.error("Failed to load rewards data:", e);
       } finally {
@@ -91,6 +93,8 @@ export function useRewardsData() {
 
     if (user?.auth_id || guestMode) {
       fetchRewards();
+    } else {
+      setLoading(false);
     }
   }, [user?.auth_id, guestMode]);
 

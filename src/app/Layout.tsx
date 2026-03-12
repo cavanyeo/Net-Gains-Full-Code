@@ -20,7 +20,7 @@ export default function Layout() {
   }
 
   // Derive user initials
-  const initials = user?.name ? user.name.charAt(0).toUpperCase() : 'U';
+  const initials = user?.username ? user.username.charAt(0).toUpperCase() : 'U';
 
   return (
     <div className="flex flex-col min-h-screen bg-[#FFFEE5] font-sans text-[#544739]">

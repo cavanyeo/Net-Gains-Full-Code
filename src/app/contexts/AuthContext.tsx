@@ -18,14 +18,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check initial session
     const checkSession = async () => {
       try {
         const { data: { session }, error } = await supabase.auth.getSession();
 
         if (error) {
           console.error("Error getting session:", error);
-          // Fall through to check guest mode
         }
 
         if (session) {
@@ -33,14 +31,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           if (userProfile) {
             setUser(userProfile);
           } else {
-            // Profile creation failed — still set basic user info from session
+            // Fallback: create a basic profile from session data
             setUser({
               auth_id: session.user.id,
-              name: session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'User',
               email: session.user.email || '',
-              coins: 0,
-              gems: 0,
-              login_streak: 0,
+              username: session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'User',
+              avatar_url: session.user.user_metadata?.avatar_url || '',
             });
           }
           setLoading(false);
@@ -57,11 +53,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (isGuest) {
         setUser({
           auth_id: 'guest',
-          name: 'Guest User',
           email: 'guest@example.com',
+          username: 'Guest User',
           coins: 100,
           gems: 10,
-          login_streak: 1
+          login_streak: 1,
         });
       }
       setLoading(false);
@@ -69,21 +65,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     checkSession();
 
-    // Listen for auth changes
+    // Listen for auth state changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
       if (event === 'SIGNED_IN' && session) {
         const userProfile = await ensureUserProfile(session);
         if (userProfile) {
           setUser(userProfile);
         } else {
-          // Fallback: use session data directly
           setUser({
             auth_id: session.user.id,
-            name: session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'User',
             email: session.user.email || '',
-            coins: 0,
-            gems: 0,
-            login_streak: 0,
+            username: session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'User',
+            avatar_url: session.user.user_metadata?.avatar_url || '',
           });
         }
         setGuestMode(false);
@@ -126,11 +119,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setGuestMode(true);
     setUser({
       auth_id: 'guest',
-      name: 'Guest User',
       email: 'guest@example.com',
+      username: 'Guest User',
       coins: 100,
       gems: 10,
-      login_streak: 1
+      login_streak: 1,
     });
   };
 
