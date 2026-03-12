@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState, useRef } from 'react';
 import { supabase, UserProfile, ensureUserProfile } from '../../lib/supabase';
 
 interface AuthContextType {
@@ -12,12 +12,40 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+// Maximum time to wait for auth before forcing loading to false
+const AUTH_TIMEOUT_MS = 5000;
+
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<UserProfile | null>(null);
   const [guestMode, setGuestMode] = useState(false);
   const [loading, setLoading] = useState(true);
+  const loadingResolved = useRef(false);
+
+  const resolveLoading = () => {
+    if (!loadingResolved.current) {
+      loadingResolved.current = true;
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
+    // Clean up stale URL hash fragments that can cause Supabase to hang.
+    // After a failed/cancelled Google OAuth, the URL may have a bare '#' 
+    // or '#error=...' that prevents getSession() from resolving.
+    const hash = window.location.hash;
+    if (hash && !hash.includes('access_token')) {
+      // Remove the stale hash without triggering a navigation
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+
+    // Safety timeout: if auth never resolves, force the app to show login
+    const timeout = setTimeout(() => {
+      if (!loadingResolved.current) {
+        console.warn('Auth check timed out after', AUTH_TIMEOUT_MS, 'ms — showing login screen');
+        resolveLoading();
+      }
+    }, AUTH_TIMEOUT_MS);
+
     const checkSession = async () => {
       try {
         const { data: { session }, error } = await supabase.auth.getSession();
@@ -31,7 +59,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           if (userProfile) {
             setUser(userProfile);
           } else {
-            // Fallback: create a basic profile from session data
             setUser({
               auth_id: session.user.id,
               email: session.user.email || '',
@@ -39,7 +66,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
               avatar_url: session.user.user_metadata?.avatar_url || '',
             });
           }
-          setLoading(false);
+          resolveLoading();
           return;
         }
       } catch (err) {
@@ -60,7 +87,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           login_streak: 1,
         });
       }
-      setLoading(false);
+      resolveLoading();
     };
 
     checkSession();
@@ -88,10 +115,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         localStorage.removeItem('net_gains_gamification');
         localStorage.removeItem('net_gains_tasks');
       }
-      setLoading(false);
+      resolveLoading();
     });
 
     return () => {
+      clearTimeout(timeout);
       subscription.unsubscribe();
     };
   }, []);
