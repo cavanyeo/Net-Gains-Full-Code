@@ -1,24 +1,9 @@
 import { motion } from "motion/react";
 import { useAuth } from "../contexts/AuthContext";
-import { LogOut, Settings, Award, Shield, CheckCircle2 } from "lucide-react";
-import { useState, useEffect } from "react";
+import { LogOut, Settings, Award } from "lucide-react";
 
 export function ProfileScreen() {
   const { user, signOut } = useAuth();
-  const [masterUnlocked, setMasterUnlocked] = useState(false);
-
-  useEffect(() => {
-    const isUnlocked = localStorage.getItem('ng_master_unlocked') === 'true';
-    setMasterUnlocked(isUnlocked);
-  }, []);
-
-  const handleToggleMaster = () => {
-    const newVal = !masterUnlocked;
-    setMasterUnlocked(newVal);
-    localStorage.setItem('ng_master_unlocked', String(newVal));
-    // Optional: reload to apply changes everywhere immediately
-    window.location.reload();
-  };
 
   const initials = user?.name ? user.name.charAt(0).toUpperCase() : 'U';
 
@@ -58,7 +43,7 @@ export function ProfileScreen() {
         </div>
       </motion.section>
 
-      {/* Settings & Master Unlock */}
+      {/* Settings */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -72,31 +57,7 @@ export function ProfileScreen() {
         
         <div className="space-y-4">
           
-          {/* Master Unlock Toggle */}
-          <div className="flex items-center justify-between p-4 rounded-xl bg-[#544739]/5 border border-[#544739]/10">
-            <div className="flex items-start gap-3">
-              <div className="p-2 bg-indigo-100 rounded-lg text-indigo-600 mt-0.5">
-                <Shield className="w-5 h-5" />
-              </div>
-              <div>
-                <p className="font-bold text-[#544739]">Master Account Access</p>
-                <p className="text-xs text-[#544739]/60">Unlock all courses and days instantly. (Developer Mode)</p>
-              </div>
-            </div>
-            
-            <button 
-              onClick={handleToggleMaster}
-              className={`w-14 h-8 rounded-full transition-colors relative flex items-center ${masterUnlocked ? 'bg-[#2CC295]' : 'bg-gray-300'}`}
-            >
-              <motion.div 
-                className="w-6 h-6 bg-white rounded-full mx-1 shadow-sm"
-                animate={{ x: masterUnlocked ? 24 : 0 }}
-                transition={{ type: "spring", stiffness: 500, damping: 30 }}
-              />
-            </button>
-          </div>
-          
-          {/* Notifications Placeholder */}
+          {/* Notifications Toggle */}
           <div className="flex items-center justify-between p-4 rounded-xl bg-[#544739]/5 border border-[#544739]/10">
             <div className="flex items-start gap-3">
               <div className="p-2 bg-orange-100 rounded-lg text-orange-600 mt-0.5">

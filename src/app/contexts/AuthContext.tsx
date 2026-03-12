@@ -20,27 +20,49 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Check initial session
     const checkSession = async () => {
-      const { data: { session }, error } = await supabase.auth.getSession();
-      
-      if (session) {
-        const userProfile = await ensureUserProfile(session);
-        setUser(userProfile);
-      } else {
-        // Check guest mode
-        const isGuest = localStorage.getItem('net_gains_guest_mode') === 'true';
-        setGuestMode(isGuest);
-        
-        if (isGuest) {
-          // Setup guest profile
-          setUser({
-            auth_id: 'guest',
-            name: 'Guest User',
-            email: 'guest@example.com',
-            coins: 100,
-            gems: 10,
-            login_streak: 1
-          });
+      try {
+        const { data: { session }, error } = await supabase.auth.getSession();
+
+        if (error) {
+          console.error("Error getting session:", error);
+          // Fall through to check guest mode
         }
+
+        if (session) {
+          const userProfile = await ensureUserProfile(session);
+          if (userProfile) {
+            setUser(userProfile);
+          } else {
+            // Profile creation failed — still set basic user info from session
+            setUser({
+              auth_id: session.user.id,
+              name: session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'User',
+              email: session.user.email || '',
+              coins: 0,
+              gems: 0,
+              login_streak: 0,
+            });
+          }
+          setLoading(false);
+          return;
+        }
+      } catch (err) {
+        console.error("Failed to check session:", err);
+      }
+
+      // No session — check guest mode
+      const isGuest = localStorage.getItem('net_gains_guest_mode') === 'true';
+      setGuestMode(isGuest);
+
+      if (isGuest) {
+        setUser({
+          auth_id: 'guest',
+          name: 'Guest User',
+          email: 'guest@example.com',
+          coins: 100,
+          gems: 10,
+          login_streak: 1
+        });
       }
       setLoading(false);
     };
@@ -51,14 +73,25 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
       if (event === 'SIGNED_IN' && session) {
         const userProfile = await ensureUserProfile(session);
-        setUser(userProfile);
+        if (userProfile) {
+          setUser(userProfile);
+        } else {
+          // Fallback: use session data directly
+          setUser({
+            auth_id: session.user.id,
+            name: session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'User',
+            email: session.user.email || '',
+            coins: 0,
+            gems: 0,
+            login_streak: 0,
+          });
+        }
         setGuestMode(false);
         localStorage.removeItem('net_gains_guest_mode');
       } else if (event === 'SIGNED_OUT') {
         setUser(null);
         setGuestMode(false);
         localStorage.removeItem('net_gains_guest_mode');
-        // Clear local storage data on sign out
         localStorage.removeItem('net_gains_gamification');
         localStorage.removeItem('net_gains_tasks');
       }
@@ -71,12 +104,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const signInWithGoogle = async () => {
-    await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: window.location.origin
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: window.location.origin
+        }
+      });
+      if (error) {
+        console.error("Google sign-in error:", error);
+        alert("Sign in failed. Please try again.");
       }
-    });
+    } catch (err) {
+      console.error("Google sign-in exception:", err);
+      alert("Sign in failed. Please check your connection and try again.");
+    }
   };
 
   const signInAsGuest = () => {
